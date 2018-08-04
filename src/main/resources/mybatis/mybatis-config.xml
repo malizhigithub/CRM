@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- 
+    配置全局文件时，需要按照以下先后顺序进行配置
+    (properties?,settings?,typeAliases?,typeHandlers?,
+      objectFactory?,objectWrapperFactory?,reflectorFactory?,
+      plugins?,environments?,databaseIdProvider?,mappers?)   
+ -->
+ 
+ 	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+		<!-- 开启mybatis二级缓存 -->	
+		<setting name="cacheEnabled" value="true"/>
+	</settings>
+ 
+  <!-- 使用别名优化mybatis配置 -->
+  <typeAliases>
+    <!-- 命名统一规范时，还可以使用package包名简化别名配置 -->
+    <package name="com.neuedu.crm.pojo"/>
+  </typeAliases>
+ 
+  <!-- 用于配置接口映射文件 -->
+  <mappers>
+    <!-- <mapper resource="mapper/CategoryMapper.xml"/>
+    <mapper resource="mapper/CustomerCareMapper.xml"/>
+    <mapper resource="mapper/CustomerLossMapper.xml"/>
+    <mapper resource="mapper/CustomerMapper.xml"/>
+    <mapper resource="mapper/CustomerTransferMapper.xml"/>
+    <mapper resource="mapper/DictionaryItemMapper.xml"/>
+    <mapper resource="mapper/DictionaryTypeMapper.xml"/>
+    <mapper resource="mapper/FollowUpMapper.xml"/>
+    <mapper resource="mapper/LinkmanMapper.xml"/>
+    <mapper resource="mapper/LogMapper.xml"/>
+    <mapper resource="mapper/OrderItemMapper.xml"/>
+    <mapper resource="mapper/OrderMapper.xml"/>
+    <mapper resource="mapper/PermissionMapper.xml"/>
+    <mapper resource="mapper/ProductMapper.xml"/>
+    <mapper resource="mapper/RoleMapper.xml"/>
+    <mapper resource="mapper/RolePermissionMapper.xml"/>
+    <mapper resource="mapper/SaleOpportunityMapper.xml"/>
+    <mapper resource="mapper/ServiceMapper.xml"/>
+    <mapper resource="mapper/ServiceTransferMapper.xml"/>
+    <mapper resource="mapper/UserMapper.xml"/> -->
+    
+  </mappers>
+</configuration>

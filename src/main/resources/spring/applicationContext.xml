@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:aop="http://www.springframework.org/schema/aop" 
+xmlns:tx="http://www.springframework.org/schema/tx" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!--   启动对@AspectJ注解的支持 -->
+	<aop:aspectj-autoproxy/>
+   
+    <!-- 整合spring + mybatis时，使用了注解配置，需要配置组件扫描器 -->
+    <context:component-scan base-package="com.neuedu.crm.service"></context:component-scan>
+    <context:component-scan base-package="com.neuedu.crm.aop"></context:component-scan>
+
+    <!-- 整合数据库连接池， 后续需要由spring进行数据库事务管理，故需要由spring统一管理数据库连接-->
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:properties/db_config.properties"/>
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="${driver}"></property>
+        <property name="url" value="${url}"></property>
+        <property name="username" value="${dbusername}"></property>
+        <property name="password" value="${password}"></property>
+    </bean>
+    
+    <!-- 整合spring+mybatis的数据源 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- mybatis改用spring提供的数据源,mybatis使用spring提供的数据源后可以删除配置文件数据源的设置 -->
+        <property name="dataSource" ref="dataSource"></property>
+        <!-- 引用mybatis全局配置文件,即由spring加载mybatis环境 -->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
+    </bean>
+    
+    <!-- mapper接口是mybatis的组件，需要由mybatis提供的整合类进行扫描 -->
+    <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.neuedu.crm.mapper"></property>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+    </bean>
+    
+    <!-- 事务操作 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" >
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <!-- 开启事务注解 -->
+    <tx:annotation-driven transaction-manager="transactionManager" />
+    <!-- 事务操作 -->
+    
+</beans>

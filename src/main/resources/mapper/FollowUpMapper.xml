@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.crm.mapper.FollowUpMapper">
+    <cache/>
+  <resultMap id="BaseResultMap" type="com.neuedu.crm.pojo.FollowUp">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="time" jdbcType="TIMESTAMP" property="time" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="general" jdbcType="VARCHAR" property="general" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="result" jdbcType="VARCHAR" property="result" />
+    <result column="customer_id" jdbcType="INTEGER" property="customerId" />
+    <result column="manager_id" jdbcType="INTEGER" property="managerId" />
+    <result column="delete_status" jdbcType="INTEGER" property="deleteStatus" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.neuedu.crm.pojo.FollowUp">
+    <result column="document" jdbcType="LONGVARCHAR" property="document" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, `time`, address, `general`, remark, content, `result`, customer_id, manager_id, 
+    delete_status
+  </sql>
+  <sql id="Blob_Column_List">
+    document
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.neuedu.crm.pojo.FollowUpExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from follow_up
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.neuedu.crm.pojo.FollowUpExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from follow_up
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from follow_up
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from follow_up
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neuedu.crm.pojo.FollowUpExample">
+    delete from follow_up
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.neuedu.crm.pojo.FollowUp" useGeneratedKeys="true">
+    insert into follow_up (`time`, address, `general`, 
+      remark, content, `result`, 
+      customer_id, manager_id, delete_status, 
+      document)
+    values (#{time,jdbcType=TIMESTAMP}, #{address,jdbcType=VARCHAR}, #{general,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{result,jdbcType=VARCHAR}, 
+      #{customerId,jdbcType=INTEGER}, #{managerId,jdbcType=INTEGER}, #{deleteStatus,jdbcType=INTEGER}, 
+      #{document,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.neuedu.crm.pojo.FollowUp" useGeneratedKeys="true">
+    insert into follow_up
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="time != null">
+        `time`,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="general != null">
+        `general`,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="result != null">
+        `result`,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="managerId != null">
+        manager_id,
+      </if>
+      <if test="deleteStatus != null">
+        delete_status,
+      </if>
+      <if test="document != null">
+        document,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="time != null">
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="general != null">
+        #{general,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null">
+        #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=INTEGER},
+      </if>
+      <if test="managerId != null">
+        #{managerId,jdbcType=INTEGER},
+      </if>
+      <if test="deleteStatus != null">
+        #{deleteStatus,jdbcType=INTEGER},
+      </if>
+      <if test="document != null">
+        #{document,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neuedu.crm.pojo.FollowUpExample" resultType="java.lang.Long">
+    select count(*) from follow_up
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update follow_up
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.time != null">
+        `time` = #{record.time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.address != null">
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
+      <if test="record.general != null">
+        `general` = #{record.general,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.content != null">
+        content = #{record.content,jdbcType=VARCHAR},
+      </if>
+      <if test="record.result != null">
+        `result` = #{record.result,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerId != null">
+        customer_id = #{record.customerId,jdbcType=INTEGER},
+      </if>
+      <if test="record.managerId != null">
+        manager_id = #{record.managerId,jdbcType=INTEGER},
+      </if>
+      <if test="record.deleteStatus != null">
+        delete_status = #{record.deleteStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.document != null">
+        document = #{record.document,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update follow_up
+    set id = #{record.id,jdbcType=INTEGER},
+      `time` = #{record.time,jdbcType=TIMESTAMP},
+      address = #{record.address,jdbcType=VARCHAR},
+      `general` = #{record.general,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      content = #{record.content,jdbcType=VARCHAR},
+      `result` = #{record.result,jdbcType=VARCHAR},
+      customer_id = #{record.customerId,jdbcType=INTEGER},
+      manager_id = #{record.managerId,jdbcType=INTEGER},
+      delete_status = #{record.deleteStatus,jdbcType=INTEGER},
+      document = #{record.document,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update follow_up
+    set id = #{record.id,jdbcType=INTEGER},
+      `time` = #{record.time,jdbcType=TIMESTAMP},
+      address = #{record.address,jdbcType=VARCHAR},
+      `general` = #{record.general,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      content = #{record.content,jdbcType=VARCHAR},
+      `result` = #{record.result,jdbcType=VARCHAR},
+      customer_id = #{record.customerId,jdbcType=INTEGER},
+      manager_id = #{record.managerId,jdbcType=INTEGER},
+      delete_status = #{record.deleteStatus,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neuedu.crm.pojo.FollowUp">
+    update follow_up
+    <set>
+      <if test="time != null">
+        `time` = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="general != null">
+        `general` = #{general,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null">
+        `result` = #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=INTEGER},
+      </if>
+      <if test="managerId != null">
+        manager_id = #{managerId,jdbcType=INTEGER},
+      </if>
+      <if test="deleteStatus != null">
+        delete_status = #{deleteStatus,jdbcType=INTEGER},
+      </if>
+      <if test="document != null">
+        document = #{document,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.neuedu.crm.pojo.FollowUp">
+    update follow_up
+    set `time` = #{time,jdbcType=TIMESTAMP},
+      address = #{address,jdbcType=VARCHAR},
+      `general` = #{general,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      `result` = #{result,jdbcType=VARCHAR},
+      customer_id = #{customerId,jdbcType=INTEGER},
+      manager_id = #{managerId,jdbcType=INTEGER},
+      delete_status = #{deleteStatus,jdbcType=INTEGER},
+      document = #{document,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neuedu.crm.pojo.FollowUp">
+    update follow_up
+    set `time` = #{time,jdbcType=TIMESTAMP},
+      address = #{address,jdbcType=VARCHAR},
+      `general` = #{general,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      `result` = #{result,jdbcType=VARCHAR},
+      customer_id = #{customerId,jdbcType=INTEGER},
+      manager_id = #{managerId,jdbcType=INTEGER},
+      delete_status = #{deleteStatus,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

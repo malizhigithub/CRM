@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>crm2</display-name>
+  <!-- 欢迎页面列表 -->
+  <welcome-file-list>
+    <!-- 当浏览器输入一个不存在的地址时 -->
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!--  配置spring 和mvc  -->
+  <!-- 配置spring上下文环境监听器，用于初始化spring运行环境 -->
+  <!-- 通过tomcat容器的上下文参数，配置spring核心配置文件的路径 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring/application*.xml</param-value>
+  </context-param>
+  
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <!-- aop中获取request -->
+  <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class> 
+  </listener>
+  
+
+    <!-- logback 
+    <context-param>
+        <param-name>logbackConfigLocation</param-name>
+        <param-value>classpath:logback.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>
+    </listener>-->
+  
+  <!-- 配置spring中央控制器或前端控制器 -->
+  <servlet>
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring/application-mvc.xml</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+ 
+  
+  <!-- 整合shiro框架，添加shiro过滤器 -->
+  <!-- <filter>
+	  <filter-name>shiroFilter</filter-name>
+	  <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	  <init-param>
+	      <param-name>targetFilterLifecycle</param-name>
+	      <param-value>true</param-value>
+	  </init-param>
+   </filter>
+   <filter-mapping>
+	   <filter-name>shiroFilter</filter-name>
+	   <url-pattern>/*</url-pattern>
+   </filter-mapping> -->
+  
+  <!-- 使用spring mvc进行编码过滤/转换(http协议默认使用iso-8859-1编码传递参数) -->
+  <filter>  
+        <filter-name>characterEncodingFilter</filter-name>  
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+        <init-param>  
+            <param-name>encoding</param-name>  
+            <param-value>UTF-8</param-value>  
+        </init-param>  
+        <init-param>  
+            <param-name>forceEncoding</param-name>  
+            <param-value>true</param-value>  
+        </init-param>  
+   </filter>   
+   <filter-mapping>  
+        <filter-name>characterEncodingFilter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+   </filter-mapping>
+   
+   <filter>
+        <filter-name>shiroFilter</filter-name>
+        <filter-class>
+            org.springframework.web.filter.DelegatingFilterProxy
+        </filter-class>
+        <init-param>
+	       <param-name>targetFilterLifecycle</param-name>
+	       <param-value>true</param-value>
+        </init-param>
+  </filter>
+  <filter-mapping>
+        <filter-name>shiroFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  
+</web-app>
+
+

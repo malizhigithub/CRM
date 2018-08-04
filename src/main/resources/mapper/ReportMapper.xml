@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.crm.mapper.ReportMapper">
+    <cache/>
+  <!-- 报表模块mapper.xml -->
+  
+  <!-- 统计公司新增的客户量 近n天的 -->
+  <select id="countCustomerIncrease"  parameterType="int" resultType="HashMap" >
+    <![CDATA[
+	    select date_format(create_time, '%m-%d') as date, count(*) as count 
+	    from customer 
+	    where date_sub(curdate(), INTERVAL #{n} DAY) <= date(date_format(create_time, '%Y-%m-%d')) 
+	    group by date 
+	    order by date asc
+    ]]>
+  </select>
+  
+  <!-- 统计公司损失的客户量 近n天的记录 -->
+  <select id="countCustomerDecrease" parameterType="int" resultType="HashMap">
+  	<![CDATA[
+  		select date_format(loss_date, '%m-%d') as date, count(*) as count 
+	    from customer_loss 
+	    where date_sub(curdate(), INTERVAL #{n} DAY) <= date(date_format(loss_date, '%Y-%m-%d')) 
+	    group by date 
+	    order by date asc
+  	]]>
+  </select>
+  
+  <!-- 统计客户经理拥有的客户量排名  按时间 -->
+  <select id="countManagerCustomerRank" parameterType="com.neuedu.crm.pojo.Report" resultType="HashMap" >
+  	select count(c.id) as count, u.real_name as name from user u 
+  	left join customer c on u.id = c.manager_id
+	<if test="startTime != null">
+		and date_format(c.create_time, #{timeFormat}) <![CDATA[>=]]> date_format(#{startTime},#{timeFormat}) 
+	</if>
+	<if test="endTime != null">
+		and date_format(c.create_time, #{timeFormat}) <![CDATA[<=]]> date_format(#{endTime}, #{timeFormat}) 
+	</if>
+  	group by u.real_name 
+  	order by count desc 
+  	limit 10
+  </select>
+  
+  <!-- 统计客户的来源 -->
+  <select id="countCustomerSource" resultType="HashMap" >
+     select count(*) as count, c.source as source 
+     from customer c
+     group by c.source
+  </select>
+  
+  <!-- 统计客户的订单总额排名  即客户与公司成交了多少金额-->
+  <select id="customerOrderPriceRank" parameterType="com.neuedu.crm.pojo.Report" resultType="HashMap">
+  	select c.name as customer, count(o.price) as count from customer c 
+  	left join orders o on o.customer_id = c.id 
+	<if test="startTime != null">
+		and date_format(o.date, #{timeFormat}) <![CDATA[>=]]> date_format(#{startTime}, #{timeFormat}) 
+	</if>
+	<if test="endTime != null">
+		and date_format(o.date, #{timeFormat}) <![CDATA[<=]]> date_format(#{endTime}, #{timeFormat}) 
+	</if>
+  	group by c.name 
+  	order by count desc
+  	limit 10
+  </select>
+  
+  
+  <!-- 日期统计 -->
+  <select id="countCustomerByDate"  parameterType="com.neuedu.crm.pojo.Report" resultType="HashMap" >
+        select date_format(create_time, #{resultDateFormat}) as date, count(*) as count 
+			from customer
+			where 1=1
+       	    and manager_id = #{userId}
+       		and date_format(create_time,#{timeFormat})
+
+            <!-- 查询时间段之间 -->
+            <if test="startTime != null and endTime != null">
+            	between date_format(#{startTime},#{timeFormat}) and date_format(#{endTime},#{timeFormat})
+            </if>
+            <!-- 查询大于等于开始时间 -->
+            <if test="startTime != null and endTime == null">
+                <![CDATA[>=]]> date_format(#{startTime},#{timeFormat})
+            </if>
+            <!-- 查询小于等于时间点之前 -->
+            <if test="startTime == null and endTime != null">
+                <![CDATA[<=]]> date_format(#{endTime},#{timeFormat})
+            </if>
+        group by date 
+        order by date asc    
+  </select>
+  
+    <!-- 日期统计 -->
+  <select id="countFollowupByDate"  parameterType="com.neuedu.crm.pojo.Report" resultType="HashMap" >
+        select date_format(time, #{resultDateFormat}) as date, count(*) as count 
+            from follow_up f,customer c  
+            where 1=1
+            and f.customer_id = c.id
+            and c.manager_id = #{userId}
+            and date_format(time,#{timeFormat})
+            
+            <!-- 查询时间段之间 -->
+            <if test="startTime != null and endTime != null">
+                between date_format(#{startTime},#{timeFormat}) and date_format(#{endTime},#{timeFormat})
+            </if>
+            <!-- 查询大于等于开始时间 -->
+            <if test="startTime != null and endTime == null">
+                <![CDATA[>=]]> date_format(#{startTime},#{timeFormat})
+            </if>
+            <!-- 查询小于等于时间点之前 -->
+            <if test="startTime == null and endTime != null">
+                <![CDATA[<=]]> date_format(#{endTime},#{timeFormat})
+            </if>
+        group by date 
+        order by date asc    
+  </select>
+  
+  <!-- 分类统计-->
+  <select id="countCustomerByCategory"  parameterType="com.neuedu.crm.pojo.Report" resultType="HashMap" >
+        select ${category} as category, count(*) as count 
+        from customer
+            where 1=1
+            and manager_id = #{userId}
+       		and date_format(create_time,#{timeFormat})
+        	
+            <!-- 查询时间段之间 -->
+            <if test="startTime != null and endTime != null">
+            	between date_format(#{startTime},#{timeFormat}) and date_format(#{endTime},#{timeFormat})
+            </if>
+            <!-- 查询大于等于开始时间 -->
+            <if test="startTime != null and endTime == null">
+                <![CDATA[>=]]> date_format(#{startTime},#{timeFormat})
+            </if>
+            <!-- 查询小于等于时间点之前 -->
+            <if test="startTime == null and endTime != null">
+                <![CDATA[<=]]> date_format(#{endTime},#{timeFormat})
+            </if>
+        group by category   
+  </select>
+  
+  <!-- <select id="countManagerSerivce" parameterType="com.neuedu.crm.pojo.Report" resultType="HashMap">
+    select ${service} as sCategory,count(*) as count
+    from service
+    WHERE handler = #{userId} AND DATE_SUB(CURDATE(),INTERVAL #{day} DAY) <![CDATA[<=]]> create_date
+    GROUP BY sCategory
+  </select> -->
+  
+  <select id="countManagerSerivce" parameterType="com.neuedu.crm.pojo.Report" resultType="HashMap">
+    <![CDATA[
+    SELECT
+    COUNT( DISTINCT IF ( s.id = NULL OR s.id = '', 0, s.id ) ) AS count,
+    d.name AS sCategory
+    FROM
+    service s
+    RIGHT JOIN dictionary_item d ON s.HANDLER = #{userId} 
+    AND s.${service} = d.name 
+    WHERE
+    IF(s.id = NULL OR s.id = '', DATE_SUB(CURDATE(),INTERVAL #{day} DAY) <= create_date , 1=1  )
+    AND d.type_id = #{dictionaryTypeId} 
+    GROUP BY
+    sCategory
+    ]]>
+  </select>
+  
+  
+  
+</mapper>

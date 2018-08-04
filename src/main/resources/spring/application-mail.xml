@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:aop="http://www.springframework.org/schema/aop"  
+    xmlns:tx="http://www.springframework.org/schema/tx"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                        http://www.springframework.org/schema/beans/spring-beans.xsd  
+                        http://www.springframework.org/schema/aop  
+                        http://www.springframework.org/schema/aop/spring-aop.xsd  
+                        http://www.springframework.org/schema/tx  
+                        http://www.springframework.org/schema/tx/spring-tx.xsd  
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
+                        ">  
+    <!-- 引入属性文件 -->
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:properties/mail.properties" />
+  
+    <!-- 邮件发送器   -->  
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">  
+        <property name="host" value="${mail.host}" /> 
+        <property name="username" value="${mail.username}" />  
+        <property name="password" value="${mail.password}" />  
+        <property name="defaultEncoding" value="UTF-8"></property>  
+        <property name="javaMailProperties">  
+            <props>  
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>  
+                <prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>  
+                <prop key="mail.smtp.port">${mail.smtp.port}</prop>  
+            </props>  
+        </property>  
+    </bean>  
+    
+    <bean id="simpleMailMessage" class="org.springframework.mail.SimpleMailMessage">
+        <!-- 发件人email -->
+        <property name="from" value="${mail.username}" />
+    </bean>
+    
+    <bean id="mailUtil" class="com.neuedu.crm.utils.MailUtil">
+        <property name="mailSender" ref="mailSender"></property>
+        <property name="simpleMailMessage" ref="simpleMailMessage"></property>
+    </bean>
+</beans>

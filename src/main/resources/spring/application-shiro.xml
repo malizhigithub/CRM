@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--  
+    1. 配置 SecurityManager!
+    -->     
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!-- 缓存 -->
+        <!-- <property name="cacheManager" ref="cacheManager"/> -->
+        <!-- 验证策略 -->
+        <!-- <property name="authenticator" ref="authenticator"></property> -->
+        <property name="realms">
+        	<list>
+    			<ref bean="ShiroRealm"/>
+    		</list>
+        </property>
+        <!-- cookies失效时间，单位秒 ,默认36.5天-->
+        <!-- <property name="rememberMeManager.cookie.maxAge" value="10"></property> -->
+    </bean>
+
+    <!--  
+    2. 配置 CacheManager. 
+    2.1 需要加入 ehcache 的 jar 包及配置文件. 
+    -->     
+    <!-- <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManagerConfigFile" value="classpath:config/ehcache.xml"/> 
+    </bean> -->
+    <!-- 验证策略 -->
+    <bean id="authenticator" 
+    	class="org.apache.shiro.authc.pam.ModularRealmAuthenticator">
+    	<property name="authenticationStrategy">
+    		<bean class="org.apache.shiro.authc.pam.AtLeastOneSuccessfulStrategy"></bean>
+    	</property>
+    </bean>
+
+    <!-- 
+    	3. 配置 Realm 
+    	3.1 直接配置实现了 org.apache.shiro.realm.Realm 接口的 bean
+    -->     
+    <bean id="ShiroRealm" class="com.neuedu.crm.shiro.realm.ShiroRealm">
+    	<property name="credentialsMatcher">
+    		<bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+    		    <!-- 使用MD5加密 -->
+    			<property name="hashAlgorithmName" value="MD5"></property>
+    			<!-- 加密的次数为2次 -->
+    			<property name="hashIterations" value="2"></property>
+    		</bean>
+    	</property>
+    	<!--启用缓存，默认关闭-->
+        <!-- <property name="cachingEnabled" value="true"/> -->
+        <!--启用身份验证缓存，即缓存AuthenticationInfo，默认false-->
+        <!-- <property name="authenticationCachingEnabled" value="true"/> -->
+        <!--启用授权缓存，即缓存AuthorizationInfo的信息，默认为false-->
+        <!-- <property name="authorizationCachingEnabled" value="true"/> -->
+    </bean>
+   
+    <!--  
+    4. 配置 LifecycleBeanPostProcessor. 可以自定的来调用配置在 Spring IOC 容器中 shiro bean 的生命周期方法. 
+    -->       
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+    
+    <!--  
+    5. 启用 IOC 容器中使用 shiro 的注解. 但必须在配置了 LifecycleBeanPostProcessor 之后才可以使用. 
+    -->     
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+          depends-on="lifecycleBeanPostProcessor"/>
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+
+    <!--  
+    6. 配置 ShiroFilter. 
+    6.1 id 必须和 web.xml 文件中配置的 DelegatingFilterProxy 的 <filter-name> 一致.
+                      若不一致, 则会抛出: NoSuchBeanDefinitionException. 因为 Shiro 会来 IOC 容器中查找和 <filter-name> 名字对应的 filter bean.
+    -->     
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/pages/login.jsp"/>
+        <property name="unauthorizedUrl" value="/views/error/unauthorized.jsp"/>
+        <property name="successUrl" value="/" />
+        <property name="filterChainDefinitionMap" ref="filterChainDefinitionMap"></property>
+        
+        <!--  
+        	配置哪些页面需要受保护. 
+        	以及访问这些页面需要的权限. 
+        	1). anon 可以被匿名访问
+        	2). authc 必须认证(即登录)后才可能访问的页面. 
+        	3). logout 登出.
+        	4). roles 角色过滤器
+        -->
+        <!--  
+        <property name="filterChainDefinitions">
+            <value>
+                /login.jsp = anon
+                /shiro/login = anon
+                /shiro/logout = logout
+                
+                /user.jsp = roles[user]
+                /admin.jsp = roles[admin]
+                
+                # everything else requires authentication:
+                /** = authc
+            </value>
+        </property>
+        -->
+    </bean>
+    
+    <!-- 配置一个 bean, 该 bean 实际上是一个 Map. 通过实例工厂方法的方式 -->
+    <bean id="filterChainDefinitionMap" 
+    	factory-bean="filterChainDefinitionMapBuilder" factory-method="buildFilterChainDefinitionMap"></bean>
+    
+    <bean id="filterChainDefinitionMapBuilder"
+    	class="com.neuedu.crm.shiro.filter.FilterChainDefinitionMapBuilder"></bean>
+    
+
+</beans>

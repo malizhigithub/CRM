@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.crm.mapper.LoggingEventMapper">
+  <resultMap id="BaseResultMap" type="com.neuedu.crm.pojo.LoggingEvent">
+    <id column="event_id" jdbcType="BIGINT" property="eventId" />
+    <result column="timestmp" jdbcType="BIGINT" property="timestmp" />
+    <result column="logger_name" jdbcType="VARCHAR" property="loggerName" />
+    <result column="level_string" jdbcType="VARCHAR" property="levelString" />
+    <result column="thread_name" jdbcType="VARCHAR" property="threadName" />
+    <result column="reference_flag" jdbcType="SMALLINT" property="referenceFlag" />
+    <result column="arg0" jdbcType="VARCHAR" property="arg0" />
+    <result column="arg1" jdbcType="VARCHAR" property="arg1" />
+    <result column="arg2" jdbcType="VARCHAR" property="arg2" />
+    <result column="arg3" jdbcType="VARCHAR" property="arg3" />
+    <result column="caller_filename" jdbcType="VARCHAR" property="callerFilename" />
+    <result column="caller_class" jdbcType="VARCHAR" property="callerClass" />
+    <result column="caller_method" jdbcType="VARCHAR" property="callerMethod" />
+    <result column="caller_line" jdbcType="CHAR" property="callerLine" />
+  </resultMap>
+  
+  <insert id="insertLog" parameterType="LoggingEvent" >
+    insert into logging_event(timestmp, formatted_message)
+    values(#{timestmp}, #{formattedMessage})
+  </insert>
+  
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.neuedu.crm.pojo.LoggingEvent">
+    <result column="formatted_message" jdbcType="LONGVARCHAR" property="formattedMessage" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    event_id, timestmp, logger_name, level_string, thread_name, reference_flag, arg0, 
+    arg1, arg2, arg3, caller_filename, caller_class, caller_method, caller_line
+  </sql>
+  <sql id="Blob_Column_List">
+    formatted_message
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.neuedu.crm.pojo.LoggingEventExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from logging_event
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.neuedu.crm.pojo.LoggingEventExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from logging_event
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from logging_event
+    where event_id = #{eventId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from logging_event
+    where event_id = #{eventId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neuedu.crm.pojo.LoggingEventExample">
+    delete from logging_event
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="event_id" keyProperty="eventId" parameterType="com.neuedu.crm.pojo.LoggingEvent" useGeneratedKeys="true">
+    insert into logging_event (timestmp, logger_name, level_string, 
+      thread_name, reference_flag, arg0, 
+      arg1, arg2, arg3, caller_filename, 
+      caller_class, caller_method, caller_line, 
+      formatted_message)
+    values (#{timestmp,jdbcType=BIGINT}, #{loggerName,jdbcType=VARCHAR}, #{levelString,jdbcType=VARCHAR}, 
+      #{threadName,jdbcType=VARCHAR}, #{referenceFlag,jdbcType=SMALLINT}, #{arg0,jdbcType=VARCHAR}, 
+      #{arg1,jdbcType=VARCHAR}, #{arg2,jdbcType=VARCHAR}, #{arg3,jdbcType=VARCHAR}, #{callerFilename,jdbcType=VARCHAR}, 
+      #{callerClass,jdbcType=VARCHAR}, #{callerMethod,jdbcType=VARCHAR}, #{callerLine,jdbcType=CHAR}, 
+      #{formattedMessage,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="event_id" keyProperty="eventId" parameterType="com.neuedu.crm.pojo.LoggingEvent" useGeneratedKeys="true">
+    insert into logging_event
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="timestmp != null">
+        timestmp,
+      </if>
+      <if test="loggerName != null">
+        logger_name,
+      </if>
+      <if test="levelString != null">
+        level_string,
+      </if>
+      <if test="threadName != null">
+        thread_name,
+      </if>
+      <if test="referenceFlag != null">
+        reference_flag,
+      </if>
+      <if test="arg0 != null">
+        arg0,
+      </if>
+      <if test="arg1 != null">
+        arg1,
+      </if>
+      <if test="arg2 != null">
+        arg2,
+      </if>
+      <if test="arg3 != null">
+        arg3,
+      </if>
+      <if test="callerFilename != null">
+        caller_filename,
+      </if>
+      <if test="callerClass != null">
+        caller_class,
+      </if>
+      <if test="callerMethod != null">
+        caller_method,
+      </if>
+      <if test="callerLine != null">
+        caller_line,
+      </if>
+      <if test="formattedMessage != null">
+        formatted_message,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="timestmp != null">
+        #{timestmp,jdbcType=BIGINT},
+      </if>
+      <if test="loggerName != null">
+        #{loggerName,jdbcType=VARCHAR},
+      </if>
+      <if test="levelString != null">
+        #{levelString,jdbcType=VARCHAR},
+      </if>
+      <if test="threadName != null">
+        #{threadName,jdbcType=VARCHAR},
+      </if>
+      <if test="referenceFlag != null">
+        #{referenceFlag,jdbcType=SMALLINT},
+      </if>
+      <if test="arg0 != null">
+        #{arg0,jdbcType=VARCHAR},
+      </if>
+      <if test="arg1 != null">
+        #{arg1,jdbcType=VARCHAR},
+      </if>
+      <if test="arg2 != null">
+        #{arg2,jdbcType=VARCHAR},
+      </if>
+      <if test="arg3 != null">
+        #{arg3,jdbcType=VARCHAR},
+      </if>
+      <if test="callerFilename != null">
+        #{callerFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="callerClass != null">
+        #{callerClass,jdbcType=VARCHAR},
+      </if>
+      <if test="callerMethod != null">
+        #{callerMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="callerLine != null">
+        #{callerLine,jdbcType=CHAR},
+      </if>
+      <if test="formattedMessage != null">
+        #{formattedMessage,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neuedu.crm.pojo.LoggingEventExample" resultType="java.lang.Long">
+    select count(*) from logging_event
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update logging_event
+    <set>
+      <if test="record.eventId != null">
+        event_id = #{record.eventId,jdbcType=BIGINT},
+      </if>
+      <if test="record.timestmp != null">
+        timestmp = #{record.timestmp,jdbcType=BIGINT},
+      </if>
+      <if test="record.loggerName != null">
+        logger_name = #{record.loggerName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.levelString != null">
+        level_string = #{record.levelString,jdbcType=VARCHAR},
+      </if>
+      <if test="record.threadName != null">
+        thread_name = #{record.threadName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.referenceFlag != null">
+        reference_flag = #{record.referenceFlag,jdbcType=SMALLINT},
+      </if>
+      <if test="record.arg0 != null">
+        arg0 = #{record.arg0,jdbcType=VARCHAR},
+      </if>
+      <if test="record.arg1 != null">
+        arg1 = #{record.arg1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.arg2 != null">
+        arg2 = #{record.arg2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.arg3 != null">
+        arg3 = #{record.arg3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.callerFilename != null">
+        caller_filename = #{record.callerFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.callerClass != null">
+        caller_class = #{record.callerClass,jdbcType=VARCHAR},
+      </if>
+      <if test="record.callerMethod != null">
+        caller_method = #{record.callerMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="record.callerLine != null">
+        caller_line = #{record.callerLine,jdbcType=CHAR},
+      </if>
+      <if test="record.formattedMessage != null">
+        formatted_message = #{record.formattedMessage,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update logging_event
+    set event_id = #{record.eventId,jdbcType=BIGINT},
+      timestmp = #{record.timestmp,jdbcType=BIGINT},
+      logger_name = #{record.loggerName,jdbcType=VARCHAR},
+      level_string = #{record.levelString,jdbcType=VARCHAR},
+      thread_name = #{record.threadName,jdbcType=VARCHAR},
+      reference_flag = #{record.referenceFlag,jdbcType=SMALLINT},
+      arg0 = #{record.arg0,jdbcType=VARCHAR},
+      arg1 = #{record.arg1,jdbcType=VARCHAR},
+      arg2 = #{record.arg2,jdbcType=VARCHAR},
+      arg3 = #{record.arg3,jdbcType=VARCHAR},
+      caller_filename = #{record.callerFilename,jdbcType=VARCHAR},
+      caller_class = #{record.callerClass,jdbcType=VARCHAR},
+      caller_method = #{record.callerMethod,jdbcType=VARCHAR},
+      caller_line = #{record.callerLine,jdbcType=CHAR},
+      formatted_message = #{record.formattedMessage,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update logging_event
+    set event_id = #{record.eventId,jdbcType=BIGINT},
+      timestmp = #{record.timestmp,jdbcType=BIGINT},
+      logger_name = #{record.loggerName,jdbcType=VARCHAR},
+      level_string = #{record.levelString,jdbcType=VARCHAR},
+      thread_name = #{record.threadName,jdbcType=VARCHAR},
+      reference_flag = #{record.referenceFlag,jdbcType=SMALLINT},
+      arg0 = #{record.arg0,jdbcType=VARCHAR},
+      arg1 = #{record.arg1,jdbcType=VARCHAR},
+      arg2 = #{record.arg2,jdbcType=VARCHAR},
+      arg3 = #{record.arg3,jdbcType=VARCHAR},
+      caller_filename = #{record.callerFilename,jdbcType=VARCHAR},
+      caller_class = #{record.callerClass,jdbcType=VARCHAR},
+      caller_method = #{record.callerMethod,jdbcType=VARCHAR},
+      caller_line = #{record.callerLine,jdbcType=CHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neuedu.crm.pojo.LoggingEvent">
+    update logging_event
+    <set>
+      <if test="timestmp != null">
+        timestmp = #{timestmp,jdbcType=BIGINT},
+      </if>
+      <if test="loggerName != null">
+        logger_name = #{loggerName,jdbcType=VARCHAR},
+      </if>
+      <if test="levelString != null">
+        level_string = #{levelString,jdbcType=VARCHAR},
+      </if>
+      <if test="threadName != null">
+        thread_name = #{threadName,jdbcType=VARCHAR},
+      </if>
+      <if test="referenceFlag != null">
+        reference_flag = #{referenceFlag,jdbcType=SMALLINT},
+      </if>
+      <if test="arg0 != null">
+        arg0 = #{arg0,jdbcType=VARCHAR},
+      </if>
+      <if test="arg1 != null">
+        arg1 = #{arg1,jdbcType=VARCHAR},
+      </if>
+      <if test="arg2 != null">
+        arg2 = #{arg2,jdbcType=VARCHAR},
+      </if>
+      <if test="arg3 != null">
+        arg3 = #{arg3,jdbcType=VARCHAR},
+      </if>
+      <if test="callerFilename != null">
+        caller_filename = #{callerFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="callerClass != null">
+        caller_class = #{callerClass,jdbcType=VARCHAR},
+      </if>
+      <if test="callerMethod != null">
+        caller_method = #{callerMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="callerLine != null">
+        caller_line = #{callerLine,jdbcType=CHAR},
+      </if>
+      <if test="formattedMessage != null">
+        formatted_message = #{formattedMessage,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where event_id = #{eventId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.neuedu.crm.pojo.LoggingEvent">
+    update logging_event
+    set timestmp = #{timestmp,jdbcType=BIGINT},
+      logger_name = #{loggerName,jdbcType=VARCHAR},
+      level_string = #{levelString,jdbcType=VARCHAR},
+      thread_name = #{threadName,jdbcType=VARCHAR},
+      reference_flag = #{referenceFlag,jdbcType=SMALLINT},
+      arg0 = #{arg0,jdbcType=VARCHAR},
+      arg1 = #{arg1,jdbcType=VARCHAR},
+      arg2 = #{arg2,jdbcType=VARCHAR},
+      arg3 = #{arg3,jdbcType=VARCHAR},
+      caller_filename = #{callerFilename,jdbcType=VARCHAR},
+      caller_class = #{callerClass,jdbcType=VARCHAR},
+      caller_method = #{callerMethod,jdbcType=VARCHAR},
+      caller_line = #{callerLine,jdbcType=CHAR},
+      formatted_message = #{formattedMessage,jdbcType=LONGVARCHAR}
+    where event_id = #{eventId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neuedu.crm.pojo.LoggingEvent">
+    update logging_event
+    set timestmp = #{timestmp,jdbcType=BIGINT},
+      logger_name = #{loggerName,jdbcType=VARCHAR},
+      level_string = #{levelString,jdbcType=VARCHAR},
+      thread_name = #{threadName,jdbcType=VARCHAR},
+      reference_flag = #{referenceFlag,jdbcType=SMALLINT},
+      arg0 = #{arg0,jdbcType=VARCHAR},
+      arg1 = #{arg1,jdbcType=VARCHAR},
+      arg2 = #{arg2,jdbcType=VARCHAR},
+      arg3 = #{arg3,jdbcType=VARCHAR},
+      caller_filename = #{callerFilename,jdbcType=VARCHAR},
+      caller_class = #{callerClass,jdbcType=VARCHAR},
+      caller_method = #{callerMethod,jdbcType=VARCHAR},
+      caller_line = #{callerLine,jdbcType=CHAR}
+    where event_id = #{eventId,jdbcType=BIGINT}
+  </update>
+</mapper>
