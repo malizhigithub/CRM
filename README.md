@@ -27,3 +27,13 @@
   - Springmvc 基于aop切面 的日志管理
   - Layui 前端框架
   - 登录验证码
+
+- 部分页面
+  - 登录页
+![](https://user-gold-cdn.xitu.io/2019/4/30/16a6a3965955c75b?w=931&h=436&f=png&s=34237)
+  - 首页
+![](https://user-gold-cdn.xitu.io/2019/4/30/16a6a3baafaf517c?w=1366&h=636&f=png&s=68745)
+  - 权限管理
+![](https://user-gold-cdn.xitu.io/2019/4/30/16a6a3c75f7bb1a2?w=1366&h=636&f=png&s=111372)
+  - 销售管理
+![](https://user-gold-cdn.xitu.io/2019/4/30/16a6a3db249207c5?w=1366&h=636&f=png&s=107207)
