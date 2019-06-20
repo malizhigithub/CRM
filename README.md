@@ -28,12 +28,14 @@
   - Layui 前端框架
   - 登录验证码
 
+- 注意点：项目密码采用md5加盐加密，部署项目后，需要到测试类中（test包下的TestUserService）进行添加账户。
+
 - 部分页面
   - 登录页
-![](https://user-gold-cdn.xitu.io/2019/4/30/16a6a3965955c75b?w=931&h=436&f=png&s=34237)
+![](https://malizhi-blog-1252037601.cos.ap-guangzhou.myqcloud.com/crm-README/%E7%99%BB%E5%BD%95%E9%A1%B5.png)
   - 首页
-![](https://user-gold-cdn.xitu.io/2019/4/30/16a6a3baafaf517c?w=1366&h=636&f=png&s=68745)
+![](https://malizhi-blog-1252037601.cos.ap-guangzhou.myqcloud.com/crm-README/%E9%A6%96%E9%A1%B5.png)
   - 权限管理
-![](https://user-gold-cdn.xitu.io/2019/4/30/16a6a3c75f7bb1a2?w=1366&h=636&f=png&s=111372)
+![](https://malizhi-blog-1252037601.cos.ap-guangzhou.myqcloud.com/crm-README/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86.png)
   - 销售管理
-![](https://user-gold-cdn.xitu.io/2019/4/30/16a6a3db249207c5?w=1366&h=636&f=png&s=107207)
+![](https://malizhi-blog-1252037601.cos.ap-guangzhou.myqcloud.com/crm-README/%E9%94%80%E5%94%AE%E7%AE%A1%E7%90%86.png)
