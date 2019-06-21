@@ -19,6 +19,7 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
     <!-- 整合spring + mybatis时，使用了注解配置，需要配置组件扫描器 -->
     <context:component-scan base-package="com.neuedu.crm.service"></context:component-scan>
     <context:component-scan base-package="com.neuedu.crm.aop"></context:component-scan>
+	<context:component-scan base-package="com.neuedu.crm.utils"></context:component-scan>
 
     <!-- 整合数据库连接池， 后续需要由spring进行数据库事务管理，故需要由spring统一管理数据库连接-->
     <context:property-placeholder ignore-unresolvable="true" location="classpath:properties/db_config.properties"/>
