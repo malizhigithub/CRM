@@ -15,7 +15,6 @@ import org.springframework.data.redis.core.ValueOperations;
  * @author wanghaoyu
  *
  */
-@Component
 public class RedisUtil {
     private Logger logger = LoggerFactory.getLogger(RedisUtil.class);
     private RedisTemplate<Serializable, Object> redisTemplate;

@@ -1,11 +1,11 @@
 package com.neuedu.crm.utils;
 
 
-
-import org.hyperic.sigar.Sigar;
-
+ 
 import java.security.CodeSource;
 import java.security.ProtectionDomain;
+
+import org.hyperic.sigar.Sigar;
  
  
 public class SigarUtils {
@@ -13,11 +13,11 @@ public class SigarUtils {
  
     public static Sigar initSigar() {
         try {
-
-
+            
+ 
             String path = System.getProperty("java.library.path");
-            ProtectionDomain pd = Sigar.class.getProtectionDomain();
-            CodeSource cs = pd.getCodeSource();
+            ProtectionDomain pd = Sigar.class.getProtectionDomain();  
+            CodeSource cs = pd.getCodeSource();  
             System.out.println("cs: "+ cs.getLocation());
             String jarUrl = cs.getLocation().toString();
             String sigarLibPath = jarUrl.substring(0, jarUrl.lastIndexOf("/"));

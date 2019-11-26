@@ -1,4 +1,17 @@
+/*
+Navicat MySQL Data Transfer
 
+Source Server         : linux_mysql_5.7.23
+Source Server Version : 50723
+Source Host           : xxx.xxx.xxx.xxx:3306
+Source Database       : CRM
+
+Target Server Type    : MYSQL
+Target Server Version : 50723
+File Encoding         : 65001
+
+Date: 2019-11-26 09:23:26
+*/
 
 SET FOREIGN_KEY_CHECKS=0;
 
@@ -62,27 +75,27 @@ CREATE TABLE `customer` (
 -- ----------------------------
 -- Records of customer
 -- ----------------------------
-INSERT INTO `customer` VALUES ('3', '阿里巴巴', '老客户', '', '', '', '杭州', '中国北京海淀区上地十街10号百度大厦', '0755-7367087', '525100', '525100', 'www.baidu.com', '1234-522465-5243232', '阿里巴巴', '1000000', '1000000', '1000000', '5678-522465-5243232', '9012-522465-5243232', '不知道从哪来的', '客户描述', '', null, '0', '14', '1', '11', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('3', '阿里巴巴', '老客户', '', '', '', '杭州', '中国北京海淀区上地十街10号百度大厦', '0755-7367087', '525100', '525100', 'www.baidu.com', '1234-522465-5243232', '阿里巴巴', '1000000', '1000000', '1000000', '5678-522465-5243232', '9012-522465-5243232', '不知道从哪来的', '客户描述', '', null, '0', null, '1', '11', '2018-07-31 09:16:31');
 INSERT INTO `customer` VALUES ('28', '终极咸鱼', '普通客户', '☆', '流失状态', '☆☆', '123123', '驱蚊器二奥术大师多阿达', '1233', '撒旦撒旦', '1231231', '123123', '12312321', '123123', '3123123', '13', '12312312', '3213123213', '213123', '客户介绍', '萨达萨达速度2', 'B+：关键人有成交意向', null, '0', '9', null, '19', '2018-07-31 09:16:31');
-INSERT INTO `customer` VALUES ('29', '测试添加2', '老客户', '', '成交客户', '', '广东', '广东省广州市', '1234567', '123456', '123456', 'www.baidu.com', '1324654987431432', 'aaa', '1e16', '农业银行', '12345678912345679841231456', '13216546949846', '13216546546465796', '手工录入', '这是一个测试客户', 'C-：初步联系，意向不确定', null, '0', '14', '6', '14', '2018-07-31 09:16:31');
-INSERT INTO `customer` VALUES ('30', '测试用户1', '', '', '流失状态', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', 'C+：初步联系，有意向', null, '0', '14', null, '14', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('29', '测试添加2', '老客户', '', '成交客户', '', '广东', '广东省广州市', '1234567', '123456', '123456', 'www.baidu.com', '1324654987431432', 'aaa', '1e16', '农业银行', '12345678912345679841231456', '13216546949846', '13216546546465796', '手工录入', '这是一个测试客户', 'C-：初步联系，意向不确定', null, '0', null, '6', '14', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('30', '测试用户1', '', '', '流失状态', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', 'C+：初步联系，有意向', null, '0', null, null, '14', '2018-07-31 09:16:31');
 INSERT INTO `customer` VALUES ('31', '小米', '供货商', '☆', '潜在客户', '☆☆', '', '', '13414852973', '', '', '', '', '', null, '', '', '', '', '朋友介绍', '', 'C+：初步联系，有意向', null, '0', '11', null, '11', '2018-07-31 09:16:31');
-INSERT INTO `customer` VALUES ('46', '客户1', '', '', '潜在客户', '', '', '', '13414852973', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '11', null, '11', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('46', '陈sir', '', '', '123', '', '', '', '13414852973', '', '', '', '', '', null, '', '', '', '', '', '', '', '', '0', '11', null, '11', '2019-11-26 09:19:15');
 INSERT INTO `customer` VALUES ('47', '客户2', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '1', '11', null, '11', '2018-08-03 20:33:58');
-INSERT INTO `customer` VALUES ('48', 'aa', '老客户', '☆☆☆', '123', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', '', '0', '19', null, '14', '2018-07-31 14:44:21');
-INSERT INTO `customer` VALUES ('49', 'vvv', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '19', null, '14', '2018-07-31 09:16:31');
-INSERT INTO `customer` VALUES ('50', '暗室逢灯', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '19', null, '14', '2018-07-31 09:16:31');
-INSERT INTO `customer` VALUES ('51', '测试客户1', '供货商', '☆☆☆', '失败客户', '☆☆☆', '', '', '', '', '', '', '', '', null, '', '', '', '', '注册会员', '', 'C-：初步联系，意向不确定', null, '0', '14', '4', '14', '2018-07-31 09:16:31');
-INSERT INTO `customer` VALUES ('52', '测试客户2', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '14', null, '14', '2018-07-31 09:16:31');
-INSERT INTO `customer` VALUES ('53', '测试客户3', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '14', null, '14', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('48', 'aa', '老客户', '☆☆☆', '123', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', '', '0', null, null, '14', '2018-07-31 14:44:21');
+INSERT INTO `customer` VALUES ('49', 'vvv', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', null, null, '14', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('50', '暗室逢灯', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', null, null, '14', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('51', '测试客户1', '供货商', '☆☆☆', '失败客户', '☆☆☆', '', '', '', '', '', '', '', '', null, '', '', '', '', '注册会员', '', 'C-：初步联系，意向不确定', null, '0', null, '4', '14', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('52', '测试客户2', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', null, null, '14', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('53', '测试客户3', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', null, null, '14', '2018-07-31 09:16:31');
 INSERT INTO `customer` VALUES ('54', 'aaa', '', '', '已流失客户', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '29', null, '29', '2018-07-31 09:16:31');
-INSERT INTO `customer` VALUES ('55', 'bbb', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '20', null, '29', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('55', 'bbb', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', null, null, '29', '2018-07-31 09:16:31');
 INSERT INTO `customer` VALUES ('59', 'asa', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '29', null, '29', '2018-07-31 09:16:31');
 INSERT INTO `customer` VALUES ('76', 'ccc', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '29', null, '29', '2018-07-31 09:16:31');
 INSERT INTO `customer` VALUES ('77', 'dddd', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '29', null, '29', '2018-07-31 09:16:31');
 INSERT INTO `customer` VALUES ('78', 'eee', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '29', null, '29', '2018-07-31 09:16:31');
-INSERT INTO `customer` VALUES ('80', '111', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', '14', null, '14', '2018-07-31 09:16:31');
-INSERT INTO `customer` VALUES ('81', '测试', '普通客户', '☆☆', '成交客户', '☆', '123123', '驱蚊器二奥术大师多阿达', '1233123123', '123123', '123123', '123213', '3123123', '3213123', '12312312', '123123123', '123123123123', '123123', '3123213', '注册会员', '123123123123', 'A+：明确成交意向', '', '0', '14', null, '19', '2018-07-31 10:23:24');
+INSERT INTO `customer` VALUES ('80', '111', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '', '', null, '0', null, null, '14', '2018-07-31 09:16:31');
+INSERT INTO `customer` VALUES ('81', '测试', '普通客户', '☆☆', '成交客户', '☆', '123123', '驱蚊器二奥术大师多阿达', '1233123123', '123123', '123123', '123213', '3123123', '3213123', '12312312', '123123123', '123123123123', '123123', '3123213', '注册会员', '123123123123', 'A+：明确成交意向', '', '0', null, null, '19', '2018-07-31 10:23:24');
 
 -- ----------------------------
 -- Table structure for customer_care
@@ -102,7 +115,7 @@ CREATE TABLE `customer_care` (
   PRIMARY KEY (`id`),
   KEY `linkman_id` (`linkman_id`),
   CONSTRAINT `customer_care_ibfk_1` FOREIGN KEY (`linkman_id`) REFERENCES `linkman` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=184 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=224 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of customer_care
@@ -145,6 +158,46 @@ INSERT INTO `customer_care` VALUES ('180', '44', '1984-08-03', null, null, null,
 INSERT INTO `customer_care` VALUES ('181', '40', '1984-08-03', null, null, null, '未处理', null, '2018-08-01 00:00:00', '29');
 INSERT INTO `customer_care` VALUES ('182', '43', '1984-08-03', null, null, null, '未处理', null, '2018-08-01 00:00:00', '14');
 INSERT INTO `customer_care` VALUES ('183', '45', '1984-08-03', null, null, null, '未处理', null, '2018-08-01 00:00:01', '14');
+INSERT INTO `customer_care` VALUES ('184', '3', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:25', '14');
+INSERT INTO `customer_care` VALUES ('185', '3', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:25', '14');
+INSERT INTO `customer_care` VALUES ('186', '4', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:35', '14');
+INSERT INTO `customer_care` VALUES ('187', '10', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:37', '14');
+INSERT INTO `customer_care` VALUES ('188', '10', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:37', '14');
+INSERT INTO `customer_care` VALUES ('189', '12', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:38', '11');
+INSERT INTO `customer_care` VALUES ('190', '12', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:38', '11');
+INSERT INTO `customer_care` VALUES ('191', '27', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:38', '11');
+INSERT INTO `customer_care` VALUES ('192', '28', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:42', '11');
+INSERT INTO `customer_care` VALUES ('193', '28', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:42', '11');
+INSERT INTO `customer_care` VALUES ('194', '29', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:42', '19');
+INSERT INTO `customer_care` VALUES ('195', '29', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:42', '19');
+INSERT INTO `customer_care` VALUES ('196', '30', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:42', '19');
+INSERT INTO `customer_care` VALUES ('197', '31', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '19');
+INSERT INTO `customer_care` VALUES ('198', '31', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '19');
+INSERT INTO `customer_care` VALUES ('199', '32', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '14');
+INSERT INTO `customer_care` VALUES ('200', '32', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '14');
+INSERT INTO `customer_care` VALUES ('201', '33', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '14');
+INSERT INTO `customer_care` VALUES ('202', '34', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '14');
+INSERT INTO `customer_care` VALUES ('203', '35', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '14');
+INSERT INTO `customer_care` VALUES ('204', '36', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '14');
+INSERT INTO `customer_care` VALUES ('205', '36', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '14');
+INSERT INTO `customer_care` VALUES ('206', '37', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '29');
+INSERT INTO `customer_care` VALUES ('207', '38', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '20');
+INSERT INTO `customer_care` VALUES ('208', '38', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '20');
+INSERT INTO `customer_care` VALUES ('209', '39', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '29');
+INSERT INTO `customer_care` VALUES ('210', '40', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '29');
+INSERT INTO `customer_care` VALUES ('211', '41', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '29');
+INSERT INTO `customer_care` VALUES ('212', '42', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '29');
+INSERT INTO `customer_care` VALUES ('213', '42', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '29');
+INSERT INTO `customer_care` VALUES ('214', '43', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '14');
+INSERT INTO `customer_care` VALUES ('215', '43', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '14');
+INSERT INTO `customer_care` VALUES ('216', '44', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:44', '14');
+INSERT INTO `customer_care` VALUES ('217', '44', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:43', '14');
+INSERT INTO `customer_care` VALUES ('218', '45', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:44', '14');
+INSERT INTO `customer_care` VALUES ('219', '45', '1984-08-03', null, null, null, '未处理', null, '2019-07-04 00:00:44', '14');
+INSERT INTO `customer_care` VALUES ('220', '1', '1984-08-04', null, null, null, '未处理', null, '2019-07-05 00:00:00', '14');
+INSERT INTO `customer_care` VALUES ('221', '1', '1984-08-04', null, null, null, '未处理', null, '2019-07-05 00:00:00', '14');
+INSERT INTO `customer_care` VALUES ('222', '2', '1984-08-05', null, null, null, '未处理', null, '2019-07-06 00:00:00', '14');
+INSERT INTO `customer_care` VALUES ('223', '2', '1984-08-05', null, null, null, '未处理', null, '2019-07-06 00:00:00', '14');
 
 -- ----------------------------
 -- Table structure for customer_loss
@@ -568,360 +621,41 @@ CREATE TABLE `logging_event` (
   `caller_line` char(4) DEFAULT NULL,
   `event_id` bigint(20) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`event_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=49348 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=50402 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of logging_event
 -- ----------------------------
-INSERT INTO `logging_event` VALUES ('1533108523153', 'malizhi 执行了 日志管理 下的  删除或清空日志 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '48999');
-INSERT INTO `logging_event` VALUES ('1533108525747', 'malizhi 执行了 日志管理 下的  查看日志 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49000');
-INSERT INTO `logging_event` VALUES ('1533108526671', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  数据字典分页查询 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49001');
-INSERT INTO `logging_event` VALUES ('1533108530249', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49002');
-INSERT INTO `logging_event` VALUES ('1533108531017', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49003');
-INSERT INTO `logging_event` VALUES ('1533108545310', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49004');
-INSERT INTO `logging_event` VALUES ('1533108545401', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49005');
-INSERT INTO `logging_event` VALUES ('1533108549228', 'malizhi 执行了 日志管理 下的  查看日志 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49006');
-INSERT INTO `logging_event` VALUES ('1533108551735', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49007');
-INSERT INTO `logging_event` VALUES ('1533108552105', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49008');
-INSERT INTO `logging_event` VALUES ('1533108554385', '游客   执行了 com.neuedu.crm.controller.LoginController 下的  注销 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49009');
-INSERT INTO `logging_event` VALUES ('1533108554905', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49010');
-INSERT INTO `logging_event` VALUES ('1533108804096', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49011');
-INSERT INTO `logging_event` VALUES ('1533108811169', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49012');
-INSERT INTO `logging_event` VALUES ('1533108813060', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49013');
-INSERT INTO `logging_event` VALUES ('1533108815736', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49014');
-INSERT INTO `logging_event` VALUES ('1533108815743', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49015');
-INSERT INTO `logging_event` VALUES ('1533108845905', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49016');
-INSERT INTO `logging_event` VALUES ('1533108871560', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49017');
-INSERT INTO `logging_event` VALUES ('1533108879253', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49018');
-INSERT INTO `logging_event` VALUES ('1533108880033', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49019');
-INSERT INTO `logging_event` VALUES ('1533108880995', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49020');
-INSERT INTO `logging_event` VALUES ('1533108881224', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49021');
-INSERT INTO `logging_event` VALUES ('1533108883453', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49022');
-INSERT INTO `logging_event` VALUES ('1533108884183', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49023');
-INSERT INTO `logging_event` VALUES ('1533108886912', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49024');
-INSERT INTO `logging_event` VALUES ('1533108962073', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49025');
-INSERT INTO `logging_event` VALUES ('1533108967251', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49026');
-INSERT INTO `logging_event` VALUES ('1533108971823', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49027');
-INSERT INTO `logging_event` VALUES ('1533109089680', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49028');
-INSERT INTO `logging_event` VALUES ('1533109093189', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49029');
-INSERT INTO `logging_event` VALUES ('1533109093190', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49030');
-INSERT INTO `logging_event` VALUES ('1533109096436', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49031');
-INSERT INTO `logging_event` VALUES ('1533109096760', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49032');
-INSERT INTO `logging_event` VALUES ('1533109098616', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49033');
-INSERT INTO `logging_event` VALUES ('1533109098741', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49034');
-INSERT INTO `logging_event` VALUES ('1533109099877', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49035');
-INSERT INTO `logging_event` VALUES ('1533109099990', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49036');
-INSERT INTO `logging_event` VALUES ('1533109100883', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49037');
-INSERT INTO `logging_event` VALUES ('1533109101001', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49038');
-INSERT INTO `logging_event` VALUES ('1533109101718', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49039');
-INSERT INTO `logging_event` VALUES ('1533109101813', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49040');
-INSERT INTO `logging_event` VALUES ('1533109107598', 'malizhi 执行了 日志管理 下的  查看日志 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49041');
-INSERT INTO `logging_event` VALUES ('1533109113430', 'malizhi 执行了 日志管理 下的  查看日志 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49042');
-INSERT INTO `logging_event` VALUES ('1533109115279', 'malizhi 执行了 日志管理 下的  查看日志 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49043');
-INSERT INTO `logging_event` VALUES ('1533109118011', 'malizhi 执行了 日志管理 下的  查看日志 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49044');
-INSERT INTO `logging_event` VALUES ('1533109121887', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49045');
-INSERT INTO `logging_event` VALUES ('1533109121890', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49046');
-INSERT INTO `logging_event` VALUES ('1533281206783', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49047');
-INSERT INTO `logging_event` VALUES ('1533281237272', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49048');
-INSERT INTO `logging_event` VALUES ('1533281388131', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49049');
-INSERT INTO `logging_event` VALUES ('1533281414053', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49050');
-INSERT INTO `logging_event` VALUES ('1533281422315', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49051');
-INSERT INTO `logging_event` VALUES ('1533281423874', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49052');
-INSERT INTO `logging_event` VALUES ('1533281423893', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49053');
-INSERT INTO `logging_event` VALUES ('1533281433054', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49054');
-INSERT INTO `logging_event` VALUES ('1533281434154', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49055');
-INSERT INTO `logging_event` VALUES ('1533281445373', 'malizhi 执行了 com.neuedu.crm.controller.CustomerController 下的  分页查询客户 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49056');
-INSERT INTO `logging_event` VALUES ('1533281568684', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  数据字典分页查询 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49057');
-INSERT INTO `logging_event` VALUES ('1533281570252', 'malizhi 执行了 com.neuedu.crm.controller.CustomerController 下的  分页查询客户 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49058');
-INSERT INTO `logging_event` VALUES ('1533281574893', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  数据字典分页查询 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49059');
-INSERT INTO `logging_event` VALUES ('1533281577413', 'malizhi 执行了 日志管理 下的  查看日志 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49060');
-INSERT INTO `logging_event` VALUES ('1533281577713', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49061');
-INSERT INTO `logging_event` VALUES ('1533281579953', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询职位 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49062');
-INSERT INTO `logging_event` VALUES ('1533281585926', 'malizhi 执行了 跟踪记录管理 下的  分页查询跟踪记录 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49063');
-INSERT INTO `logging_event` VALUES ('1533281641507', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49064');
-INSERT INTO `logging_event` VALUES ('1533281642913', 'malizhi 执行了 跟踪记录管理 下的  分页查询跟踪记录 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49065');
-INSERT INTO `logging_event` VALUES ('1533281681561', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49066');
-INSERT INTO `logging_event` VALUES ('1533281698657', 'malizhi 执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49067');
-INSERT INTO `logging_event` VALUES ('1533281704801', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49068');
-INSERT INTO `logging_event` VALUES ('1533281705798', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49069');
-INSERT INTO `logging_event` VALUES ('1533281705948', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49070');
-INSERT INTO `logging_event` VALUES ('1533281708719', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49071');
-INSERT INTO `logging_event` VALUES ('1533281709457', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49072');
-INSERT INTO `logging_event` VALUES ('1533281709608', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49073');
-INSERT INTO `logging_event` VALUES ('1533281712093', '游客   执行了 com.neuedu.crm.controller.LoginController 下的  注销 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49074');
-INSERT INTO `logging_event` VALUES ('1533281712591', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49075');
-INSERT INTO `logging_event` VALUES ('1533281714134', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49076');
-INSERT INTO `logging_event` VALUES ('1533281715355', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49077');
-INSERT INTO `logging_event` VALUES ('1533281719842', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49078');
-INSERT INTO `logging_event` VALUES ('1533281761838', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49079');
-INSERT INTO `logging_event` VALUES ('1533284593020', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49080');
-INSERT INTO `logging_event` VALUES ('1533284879442', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49081');
-INSERT INTO `logging_event` VALUES ('1533284885919', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49082');
-INSERT INTO `logging_event` VALUES ('1533284894291', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49083');
-INSERT INTO `logging_event` VALUES ('1533284895465', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49084');
-INSERT INTO `logging_event` VALUES ('1533284895974', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49085');
-INSERT INTO `logging_event` VALUES ('1533284900493', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49086');
-INSERT INTO `logging_event` VALUES ('1533284901758', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49087');
-INSERT INTO `logging_event` VALUES ('1533284925392', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49088');
-INSERT INTO `logging_event` VALUES ('1533284929132', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49089');
-INSERT INTO `logging_event` VALUES ('1533284936833', 'malizhi 执行了 销售机会管理 下的  批量删除销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49090');
-INSERT INTO `logging_event` VALUES ('1533284939192', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49091');
-INSERT INTO `logging_event` VALUES ('1533294850332', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49092');
-INSERT INTO `logging_event` VALUES ('1533295822854', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49093');
-INSERT INTO `logging_event` VALUES ('1533295834976', '游客   执行了 com.neuedu.crm.controller.UserController 下的  获取找回密码所需的验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49094');
-INSERT INTO `logging_event` VALUES ('1533295902885', '游客   执行了 com.neuedu.crm.controller.UserController 下的  获取找回密码所需的验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49095');
-INSERT INTO `logging_event` VALUES ('1533295922909', '游客   执行了 com.neuedu.crm.controller.UserController 下的  重设密码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49096');
-INSERT INTO `logging_event` VALUES ('1533295924323', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49097');
-INSERT INTO `logging_event` VALUES ('1533295930785', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49098');
-INSERT INTO `logging_event` VALUES ('1533295933649', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49099');
-INSERT INTO `logging_event` VALUES ('1533295934766', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49100');
-INSERT INTO `logging_event` VALUES ('1533295934809', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49101');
-INSERT INTO `logging_event` VALUES ('1533295938026', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49102');
-INSERT INTO `logging_event` VALUES ('1533295938488', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49103');
-INSERT INTO `logging_event` VALUES ('1533295955759', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49104');
-INSERT INTO `logging_event` VALUES ('1533295955905', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49105');
-INSERT INTO `logging_event` VALUES ('1533295967591', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49106');
-INSERT INTO `logging_event` VALUES ('1533295967934', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49107');
-INSERT INTO `logging_event` VALUES ('1533297324493', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49108');
-INSERT INTO `logging_event` VALUES ('1533297324763', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49109');
-INSERT INTO `logging_event` VALUES ('1533297395824', 'malizhi 执行了 com.neuedu.crm.controller.SystemController 下的  查询系统信息 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49110');
-INSERT INTO `logging_event` VALUES ('1533297427452', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49111');
-INSERT INTO `logging_event` VALUES ('1533297434072', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49112');
-INSERT INTO `logging_event` VALUES ('1533297441587', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49113');
-INSERT INTO `logging_event` VALUES ('1533297444352', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49114');
-INSERT INTO `logging_event` VALUES ('1533297444363', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49115');
-INSERT INTO `logging_event` VALUES ('1533297451897', 'malizhi 执行了 com.neuedu.crm.controller.SystemController 下的  查询系统信息 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49116');
-INSERT INTO `logging_event` VALUES ('1533298490753', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49117');
-INSERT INTO `logging_event` VALUES ('1533298491729', 'malizhi 执行了 com.neuedu.crm.controller.SystemController 下的  查询系统信息 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49118');
-INSERT INTO `logging_event` VALUES ('1533299621599', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49119');
-INSERT INTO `logging_event` VALUES ('1533299622473', 'malizhi 执行了 com.neuedu.crm.controller.SystemController 下的  查询系统信息 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49120');
-INSERT INTO `logging_event` VALUES ('1533299628684', 'malizhi 执行了 com.neuedu.crm.controller.CustomerController 下的  分页查询客户 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49121');
-INSERT INTO `logging_event` VALUES ('1533299630462', 'malizhi 执行了 com.neuedu.crm.controller.CustomerController 下的  id查找客户 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49122');
-INSERT INTO `logging_event` VALUES ('1533299630530', 'malizhi 执行了 客户转移控制器 下的  客户转移记录查询 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49123');
-INSERT INTO `logging_event` VALUES ('1533299630540', 'malizhi 执行了 跟踪记录管理 下的  分页查询跟踪记录 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49124');
-INSERT INTO `logging_event` VALUES ('1533299638758', 'malizhi 执行了 com.neuedu.crm.controller.CustomerController 下的  删除客户 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49125');
-INSERT INTO `logging_event` VALUES ('1533299641325', 'malizhi 执行了 com.neuedu.crm.controller.CustomerController 下的  分页查询客户 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49126');
-INSERT INTO `logging_event` VALUES ('1533299643188', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49127');
-INSERT INTO `logging_event` VALUES ('1533299643239', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49128');
-INSERT INTO `logging_event` VALUES ('1533299647002', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49129');
-INSERT INTO `logging_event` VALUES ('1533299648877', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49130');
-INSERT INTO `logging_event` VALUES ('1533299686863', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49131');
-INSERT INTO `logging_event` VALUES ('1533299666237', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49132');
-INSERT INTO `logging_event` VALUES ('1533299687824', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49133');
-INSERT INTO `logging_event` VALUES ('1533299688412', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49134');
-INSERT INTO `logging_event` VALUES ('1533299688436', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49135');
-INSERT INTO `logging_event` VALUES ('1533299693489', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49136');
-INSERT INTO `logging_event` VALUES ('1533299693608', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49137');
-INSERT INTO `logging_event` VALUES ('1533299679482', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49138');
-INSERT INTO `logging_event` VALUES ('1533302202288', '游客   执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49139');
-INSERT INTO `logging_event` VALUES ('1533302202465', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49140');
-INSERT INTO `logging_event` VALUES ('1533302185646', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49141');
-INSERT INTO `logging_event` VALUES ('1533302206130', '游客   执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49142');
-INSERT INTO `logging_event` VALUES ('1533302206221', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49143');
-INSERT INTO `logging_event` VALUES ('1533302209903', '游客   执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49144');
-INSERT INTO `logging_event` VALUES ('1533302209990', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49145');
-INSERT INTO `logging_event` VALUES ('1533302194413', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49146');
-INSERT INTO `logging_event` VALUES ('1533302216255', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49147');
-INSERT INTO `logging_event` VALUES ('1533302226806', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49148');
-INSERT INTO `logging_event` VALUES ('1533302263120', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49149');
-INSERT INTO `logging_event` VALUES ('1533302354999', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49150');
-INSERT INTO `logging_event` VALUES ('1533302437069', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49151');
-INSERT INTO `logging_event` VALUES ('1533302542272', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49152');
-INSERT INTO `logging_event` VALUES ('1533302549396', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49153');
-INSERT INTO `logging_event` VALUES ('1533302552138', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49154');
-INSERT INTO `logging_event` VALUES ('1533302552909', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49155');
-INSERT INTO `logging_event` VALUES ('1533302552915', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49156');
-INSERT INTO `logging_event` VALUES ('1533302562283', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49157');
-INSERT INTO `logging_event` VALUES ('1533302562624', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49158');
-INSERT INTO `logging_event` VALUES ('1533302720410', 'malizhi 执行了 com.neuedu.crm.controller.SystemController 下的  查询系统信息 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49159');
-INSERT INTO `logging_event` VALUES ('1533303525305', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49160');
-INSERT INTO `logging_event` VALUES ('1533303532288', 'malizhi 执行了 com.neuedu.crm.controller.SystemController 下的  查询系统信息 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49161');
-INSERT INTO `logging_event` VALUES ('1533306062411', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49162');
-INSERT INTO `logging_event` VALUES ('1533306063264', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49163');
-INSERT INTO `logging_event` VALUES ('1533306063876', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49164');
-INSERT INTO `logging_event` VALUES ('1533306063897', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49165');
-INSERT INTO `logging_event` VALUES ('1533306045674', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49166');
-INSERT INTO `logging_event` VALUES ('1533306070714', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49167');
-INSERT INTO `logging_event` VALUES ('1533306070837', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49168');
-INSERT INTO `logging_event` VALUES ('1533306054752', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49169');
-INSERT INTO `logging_event` VALUES ('1533306076133', 'malizhi 执行了 权限管理 下的  获取权限树 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49170');
-INSERT INTO `logging_event` VALUES ('1533306093267', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49171');
-INSERT INTO `logging_event` VALUES ('1533306094299', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49172');
-INSERT INTO `logging_event` VALUES ('1533306095062', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49173');
-INSERT INTO `logging_event` VALUES ('1533306098481', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49174');
-INSERT INTO `logging_event` VALUES ('1533306149606', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49175');
-INSERT INTO `logging_event` VALUES ('1533306150582', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49176');
-INSERT INTO `logging_event` VALUES ('1533306195599', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49177');
-INSERT INTO `logging_event` VALUES ('1533306196097', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49178');
-INSERT INTO `logging_event` VALUES ('1533306196114', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49179');
-INSERT INTO `logging_event` VALUES ('1533306200120', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49180');
-INSERT INTO `logging_event` VALUES ('1533307516177', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49181');
-INSERT INTO `logging_event` VALUES ('1533307523396', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49182');
-INSERT INTO `logging_event` VALUES ('1533307524406', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49183');
-INSERT INTO `logging_event` VALUES ('1533307525562', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49184');
-INSERT INTO `logging_event` VALUES ('1533307525610', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49185');
-INSERT INTO `logging_event` VALUES ('1533307531801', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询职位 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49186');
-INSERT INTO `logging_event` VALUES ('1533307533447', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49187');
-INSERT INTO `logging_event` VALUES ('1533307535384', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询职位 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49188');
-INSERT INTO `logging_event` VALUES ('1533307539052', 'malizhi 执行了 权限管理 下的  获取权限树 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49189');
-INSERT INTO `logging_event` VALUES ('1533307539265', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询角色所拥有的权限id 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49190');
-INSERT INTO `logging_event` VALUES ('1533307546488', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49191');
-INSERT INTO `logging_event` VALUES ('1533307547387', 'malizhi 执行了 权限管理 下的  获取权限树 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49192');
-INSERT INTO `logging_event` VALUES ('1533307772678', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询职位 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49193');
-INSERT INTO `logging_event` VALUES ('1533307773959', 'malizhi 执行了 权限管理 下的  获取权限树 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49194');
-INSERT INTO `logging_event` VALUES ('1533307774097', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询角色所拥有的权限id 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49195');
-INSERT INTO `logging_event` VALUES ('1533307849454', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  删除职位 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49196');
-INSERT INTO `logging_event` VALUES ('1533307850868', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询职位 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49197');
-INSERT INTO `logging_event` VALUES ('1533308032939', 'malizhi 执行了 权限管理 下的  获取权限树 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49198');
-INSERT INTO `logging_event` VALUES ('1533308033074', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询角色所拥有的权限id 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49199');
-INSERT INTO `logging_event` VALUES ('1533309155079', 'malizhi 执行了 权限管理 下的  获取权限树 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49200');
-INSERT INTO `logging_event` VALUES ('1533309155228', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询角色所拥有的权限id 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49201');
-INSERT INTO `logging_event` VALUES ('1533309865807', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49202');
-INSERT INTO `logging_event` VALUES ('1533309884894', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49203');
-INSERT INTO `logging_event` VALUES ('1533310402295', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49204');
-INSERT INTO `logging_event` VALUES ('1533310403831', 'malizhi 执行了 权限管理 下的  获取权限树 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49205');
-INSERT INTO `logging_event` VALUES ('1533310410230', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询职位 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49206');
-INSERT INTO `logging_event` VALUES ('1533310411349', 'malizhi 执行了 权限管理 下的  获取权限树 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49207');
-INSERT INTO `logging_event` VALUES ('1533310412213', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询角色所拥有的权限id 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49208');
-INSERT INTO `logging_event` VALUES ('1533315061445', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49209');
-INSERT INTO `logging_event` VALUES ('1533315080671', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49210');
-INSERT INTO `logging_event` VALUES ('1533315087638', '游客   执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49211');
-INSERT INTO `logging_event` VALUES ('1533315087745', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49212');
-INSERT INTO `logging_event` VALUES ('1533315092072', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49213');
-INSERT INTO `logging_event` VALUES ('1533315093175', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49214');
-INSERT INTO `logging_event` VALUES ('1533315093234', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49215');
-INSERT INTO `logging_event` VALUES ('1533315094053', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49216');
-INSERT INTO `logging_event` VALUES ('1533315094040', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49217');
-INSERT INTO `logging_event` VALUES ('1533315097812', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询职位 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49218');
-INSERT INTO `logging_event` VALUES ('1533315099829', 'malizhi 执行了 权限管理 下的  获取权限树 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49219');
-INSERT INTO `logging_event` VALUES ('1533315099961', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  查询角色所拥有的权限id 操作！ ip地址为0:0:0:0:0:0:0:1', null, null, null, null, null, null, null, null, null, null, null, null, '49220');
-INSERT INTO `logging_event` VALUES ('1533610347249', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49221');
-INSERT INTO `logging_event` VALUES ('1533833802831', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49222');
-INSERT INTO `logging_event` VALUES ('1533868877762', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49223');
-INSERT INTO `logging_event` VALUES ('1533869047324', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为183.63.187.202', null, null, null, null, null, null, null, null, null, null, null, null, '49224');
-INSERT INTO `logging_event` VALUES ('1534142654938', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为117.136.79.18', null, null, null, null, null, null, null, null, null, null, null, null, '49225');
-INSERT INTO `logging_event` VALUES ('1534142674823', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为117.136.79.18', null, null, null, null, null, null, null, null, null, null, null, null, '49226');
-INSERT INTO `logging_event` VALUES ('1534142677490', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为117.136.79.18', null, null, null, null, null, null, null, null, null, null, null, null, '49227');
-INSERT INTO `logging_event` VALUES ('1534142681383', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为117.136.79.18', null, null, null, null, null, null, null, null, null, null, null, null, '49228');
-INSERT INTO `logging_event` VALUES ('1534142681394', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为117.136.79.18', null, null, null, null, null, null, null, null, null, null, null, null, '49229');
-INSERT INTO `logging_event` VALUES ('1534142684417', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为117.136.79.18', null, null, null, null, null, null, null, null, null, null, null, null, '49230');
-INSERT INTO `logging_event` VALUES ('1534142684422', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为117.136.79.18', null, null, null, null, null, null, null, null, null, null, null, null, '49231');
-INSERT INTO `logging_event` VALUES ('1534142685878', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为117.136.79.18', null, null, null, null, null, null, null, null, null, null, null, null, '49232');
-INSERT INTO `logging_event` VALUES ('1534142685880', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为117.136.79.18', null, null, null, null, null, null, null, null, null, null, null, null, '49233');
-INSERT INTO `logging_event` VALUES ('1534333831167', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49234');
-INSERT INTO `logging_event` VALUES ('1534333837163', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49235');
-INSERT INTO `logging_event` VALUES ('1534333839543', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49236');
-INSERT INTO `logging_event` VALUES ('1534333842269', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49237');
-INSERT INTO `logging_event` VALUES ('1534333842283', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49238');
-INSERT INTO `logging_event` VALUES ('1534333845811', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49239');
-INSERT INTO `logging_event` VALUES ('1534333846250', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49240');
-INSERT INTO `logging_event` VALUES ('1534333846247', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49241');
-INSERT INTO `logging_event` VALUES ('1534333849751', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49242');
-INSERT INTO `logging_event` VALUES ('1534333850040', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49243');
-INSERT INTO `logging_event` VALUES ('1534333850035', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49244');
-INSERT INTO `logging_event` VALUES ('1534334041953', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49245');
-INSERT INTO `logging_event` VALUES ('1534334042350', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49246');
-INSERT INTO `logging_event` VALUES ('1534334042357', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49247');
-INSERT INTO `logging_event` VALUES ('1534334254771', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49248');
-INSERT INTO `logging_event` VALUES ('1534334278379', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49249');
-INSERT INTO `logging_event` VALUES ('1534334307615', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49250');
-INSERT INTO `logging_event` VALUES ('1534334307854', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49251');
-INSERT INTO `logging_event` VALUES ('1534334348946', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49252');
-INSERT INTO `logging_event` VALUES ('1534334358077', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49253');
-INSERT INTO `logging_event` VALUES ('1534334366199', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49254');
-INSERT INTO `logging_event` VALUES ('1534334366356', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49255');
-INSERT INTO `logging_event` VALUES ('1534334368786', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49256');
-INSERT INTO `logging_event` VALUES ('1534334369407', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49257');
-INSERT INTO `logging_event` VALUES ('1534334369426', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49258');
-INSERT INTO `logging_event` VALUES ('1534334372419', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49259');
-INSERT INTO `logging_event` VALUES ('1534334372457', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49260');
-INSERT INTO `logging_event` VALUES ('1534334387955', 'malizhi 执行了 销售机会管理 下的  批量删除销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49261');
-INSERT INTO `logging_event` VALUES ('1534334389250', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49262');
-INSERT INTO `logging_event` VALUES ('1534334402928', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49263');
-INSERT INTO `logging_event` VALUES ('1534334403031', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49264');
-INSERT INTO `logging_event` VALUES ('1534334403939', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49265');
-INSERT INTO `logging_event` VALUES ('1534334403966', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49266');
-INSERT INTO `logging_event` VALUES ('1534334404623', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49267');
-INSERT INTO `logging_event` VALUES ('1534334404661', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49268');
-INSERT INTO `logging_event` VALUES ('1534334420320', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49269');
-INSERT INTO `logging_event` VALUES ('1534334420375', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49270');
-INSERT INTO `logging_event` VALUES ('1534334422634', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49271');
-INSERT INTO `logging_event` VALUES ('1534334422689', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49272');
-INSERT INTO `logging_event` VALUES ('1534334422760', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49273');
-INSERT INTO `logging_event` VALUES ('1534334422811', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49274');
-INSERT INTO `logging_event` VALUES ('1534334422880', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49275');
-INSERT INTO `logging_event` VALUES ('1534334422942', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49276');
-INSERT INTO `logging_event` VALUES ('1534334423009', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49277');
-INSERT INTO `logging_event` VALUES ('1534334423061', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49278');
-INSERT INTO `logging_event` VALUES ('1534334424616', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49279');
-INSERT INTO `logging_event` VALUES ('1534334424658', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49280');
-INSERT INTO `logging_event` VALUES ('1534334428563', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49281');
-INSERT INTO `logging_event` VALUES ('1534334428612', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49282');
-INSERT INTO `logging_event` VALUES ('1534334429437', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49283');
-INSERT INTO `logging_event` VALUES ('1534334429482', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49284');
-INSERT INTO `logging_event` VALUES ('1534334430090', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49285');
-INSERT INTO `logging_event` VALUES ('1534334430164', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49286');
-INSERT INTO `logging_event` VALUES ('1534334430737', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49287');
-INSERT INTO `logging_event` VALUES ('1534334430765', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49288');
-INSERT INTO `logging_event` VALUES ('1534334437120', 'malizhi 执行了 销售机会管理 下的  批量删除销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49289');
-INSERT INTO `logging_event` VALUES ('1534334438901', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49290');
-INSERT INTO `logging_event` VALUES ('1534334444741', 'malizhi 执行了 销售机会管理 下的  批量删除销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49291');
-INSERT INTO `logging_event` VALUES ('1534334449227', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49292');
-INSERT INTO `logging_event` VALUES ('1534334452533', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49293');
-INSERT INTO `logging_event` VALUES ('1534334453257', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49294');
-INSERT INTO `logging_event` VALUES ('1534334453311', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49295');
-INSERT INTO `logging_event` VALUES ('1534334455214', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49296');
-INSERT INTO `logging_event` VALUES ('1534334455611', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49297');
-INSERT INTO `logging_event` VALUES ('1534334455640', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49298');
-INSERT INTO `logging_event` VALUES ('1534334459626', 'malizhi 执行了 日志管理 下的  查看日志 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49299');
-INSERT INTO `logging_event` VALUES ('1534334532315', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49300');
-INSERT INTO `logging_event` VALUES ('1534334532840', 'malizhi 执行了 日志管理 下的  查看日志 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49301');
-INSERT INTO `logging_event` VALUES ('1534334536656', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49302');
-INSERT INTO `logging_event` VALUES ('1534334536692', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49303');
-INSERT INTO `logging_event` VALUES ('1534334538437', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  数据字典分页查询 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49304');
-INSERT INTO `logging_event` VALUES ('1534334553281', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  数据字典分页查询 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49305');
-INSERT INTO `logging_event` VALUES ('1534432130815', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49306');
-INSERT INTO `logging_event` VALUES ('1534432138013', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49307');
-INSERT INTO `logging_event` VALUES ('1534432142103', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49308');
-INSERT INTO `logging_event` VALUES ('1534432145478', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49309');
-INSERT INTO `logging_event` VALUES ('1534432145489', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49310');
-INSERT INTO `logging_event` VALUES ('1534432158323', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49311');
-INSERT INTO `logging_event` VALUES ('1534432160569', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49312');
-INSERT INTO `logging_event` VALUES ('1534432193082', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49313');
-INSERT INTO `logging_event` VALUES ('1534432193117', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49314');
-INSERT INTO `logging_event` VALUES ('1534432193850', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49315');
-INSERT INTO `logging_event` VALUES ('1534432193874', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49316');
-INSERT INTO `logging_event` VALUES ('1534432194811', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49317');
-INSERT INTO `logging_event` VALUES ('1534432194839', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49318');
-INSERT INTO `logging_event` VALUES ('1534434272469', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49319');
-INSERT INTO `logging_event` VALUES ('1534434276974', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49320');
-INSERT INTO `logging_event` VALUES ('1534434277227', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49321');
-INSERT INTO `logging_event` VALUES ('1534434277587', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49322');
-INSERT INTO `logging_event` VALUES ('1534434277599', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49323');
-INSERT INTO `logging_event` VALUES ('1534434284488', 'malizhi 执行了 权限管理 下的  查询权限 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49324');
-INSERT INTO `logging_event` VALUES ('1534807032900', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49325');
-INSERT INTO `logging_event` VALUES ('1534807039634', '游客   执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49326');
-INSERT INTO `logging_event` VALUES ('1534807039673', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49327');
-INSERT INTO `logging_event` VALUES ('1534807045148', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49328');
-INSERT INTO `logging_event` VALUES ('1534807047716', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49329');
-INSERT INTO `logging_event` VALUES ('1534807050369', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49330');
-INSERT INTO `logging_event` VALUES ('1534807050371', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49331');
-INSERT INTO `logging_event` VALUES ('1534807057295', 'malizhi 执行了 com.neuedu.crm.controller.DictionaryTypeController 下的  用户通过名称或ID查找字典 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49332');
-INSERT INTO `logging_event` VALUES ('1534807057345', 'malizhi 执行了 销售机会管理 下的  查看销售机会 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49333');
-INSERT INTO `logging_event` VALUES ('1534807064529', 'malizhi 执行了 com.neuedu.crm.controller.CustomerController 下的  分页查询客户 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49334');
-INSERT INTO `logging_event` VALUES ('1534807080976', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  查找当前登录的用户 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49335');
-INSERT INTO `logging_event` VALUES ('1534807088049', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49336');
-INSERT INTO `logging_event` VALUES ('1534807088461', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  查找当前登录的用户 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49337');
-INSERT INTO `logging_event` VALUES ('1534807098084', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49338');
-INSERT INTO `logging_event` VALUES ('1534807098099', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49339');
-INSERT INTO `logging_event` VALUES ('1534807251765', 'malizhi 执行了 com.neuedu.crm.controller.ServiceController 下的  查找服务 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49340');
-INSERT INTO `logging_event` VALUES ('1535084695286', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49341');
-INSERT INTO `logging_event` VALUES ('1535084786673', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49342');
-INSERT INTO `logging_event` VALUES ('1535084788458', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49343');
-INSERT INTO `logging_event` VALUES ('1535084791048', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49344');
-INSERT INTO `logging_event` VALUES ('1535084791059', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49345');
-INSERT INTO `logging_event` VALUES ('1535381682953', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49346');
-INSERT INTO `logging_event` VALUES ('1535381691948', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.146.92.73', null, null, null, null, null, null, null, null, null, null, null, null, '49347');
+INSERT INTO `logging_event` VALUES ('1574731226537', 'malizhi 执行了 日志管理 下的  删除或清空日志 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50372');
+INSERT INTO `logging_event` VALUES ('1574731227403', 'malizhi 执行了 日志管理 下的  查看日志 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50373');
+INSERT INTO `logging_event` VALUES ('1574731300727', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50374');
+INSERT INTO `logging_event` VALUES ('1574731300775', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  查找用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50375');
+INSERT INTO `logging_event` VALUES ('1574731303057', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50376');
+INSERT INTO `logging_event` VALUES ('1574731303113', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50377');
+INSERT INTO `logging_event` VALUES ('1574731325284', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  修改用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50378');
+INSERT INTO `logging_event` VALUES ('1574731326264', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  查找用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50379');
+INSERT INTO `logging_event` VALUES ('1574731328405', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50380');
+INSERT INTO `logging_event` VALUES ('1574731328483', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50381');
+INSERT INTO `logging_event` VALUES ('1574731344604', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  修改用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50382');
+INSERT INTO `logging_event` VALUES ('1574731345604', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  查找用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50383');
+INSERT INTO `logging_event` VALUES ('1574731346966', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50384');
+INSERT INTO `logging_event` VALUES ('1574731347004', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50385');
+INSERT INTO `logging_event` VALUES ('1574731363755', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  修改用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50386');
+INSERT INTO `logging_event` VALUES ('1574731364573', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  查找用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50387');
+INSERT INTO `logging_event` VALUES ('1574731370740', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50388');
+INSERT INTO `logging_event` VALUES ('1574731370804', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50389');
+INSERT INTO `logging_event` VALUES ('1574731373577', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  修改用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50390');
+INSERT INTO `logging_event` VALUES ('1574731374474', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  查找用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50391');
+INSERT INTO `logging_event` VALUES ('1574731376319', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50392');
+INSERT INTO `logging_event` VALUES ('1574731376369', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  后台查找角色列表 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50393');
+INSERT INTO `logging_event` VALUES ('1574731379243', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  修改用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50394');
+INSERT INTO `logging_event` VALUES ('1574731380339', 'malizhi 执行了 com.neuedu.crm.controller.UserController 下的  查找用户 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50395');
+INSERT INTO `logging_event` VALUES ('1574731382400', '游客   执行了 com.neuedu.crm.controller.LoginController 下的  注销 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50396');
+INSERT INTO `logging_event` VALUES ('1574731382456', '游客   执行了 验证码控制器 下的  获取验证码 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50397');
+INSERT INTO `logging_event` VALUES ('1574731388610', 'malizhi 执行了 com.neuedu.crm.controller.LoginController 下的  登陆 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50398');
+INSERT INTO `logging_event` VALUES ('1574731389008', 'malizhi 执行了 com.neuedu.crm.controller.RoleController 下的  获取用户角色的权限菜单 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50399');
+INSERT INTO `logging_event` VALUES ('1574731391421', 'malizhi 执行了 报表控制器 下的  统计公司新增的客户量 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50400');
+INSERT INTO `logging_event` VALUES ('1574731391428', 'malizhi 执行了 报表控制器 下的  统计公司的客户来源情况 操作！ ip地址为14.23.49.197', null, null, null, null, null, null, null, null, null, null, null, null, '50401');
 
 -- ----------------------------
 -- Table structure for logging_event_exception
@@ -5420,7 +5154,7 @@ CREATE TABLE `permission` (
 -- ----------------------------
 -- Records of permission
 -- ----------------------------
-INSERT INTO `permission` VALUES ('1', '72', '0', '用户管理', '管理登录用户的信息11111', 'views/user/user.jsp', '1000', '00000000001');
+INSERT INTO `permission` VALUES ('1', '72', '0', '用户管理', '管理登录用户的信息11111', 'views/user/user.jsp', '1000', '00000000000');
 INSERT INTO `permission` VALUES ('2', '72', '0', '日志管理', '管理日志内容', 'views/logging.jsp', '2000', '00000000000');
 INSERT INTO `permission` VALUES ('3', '72', '0', '权限管理', '管理权限内容', 'views/permiss/permission.jsp', '3000', '00000000000');
 INSERT INTO `permission` VALUES ('4', '72', '0', '角色管理', '管理系统角色的信息', 'views/role/role.jsp', '4000', '00000000000');
@@ -5887,14 +5621,14 @@ INSERT INTO `sale_opportunity` VALUES ('7', '48', '客户介绍', '90', '这是�
 INSERT INTO `sale_opportunity` VALUES ('8', '49', '展会', '90', '这是销售机会概要', '12', '13414852973', '这是销售机会描述', '11', '2018-07-20 15:32:26', '11', '2018-07-20 15:32:26', '立项评估', '00000000000');
 INSERT INTO `sale_opportunity` VALUES ('9', '46', '招标公告', '40', '这是销售机会概要', '27', '13414852973', '这是销售机会描述', '11', '2018-07-19 15:42:49', '11', '2018-07-19 15:42:49', '立项评估', '00000000001');
 INSERT INTO `sale_opportunity` VALUES ('10', '46', '展会', '30', '这是销售机会概要', '27', '13414852973', '这是销售机会描述', '11', '2018-07-19 15:42:51', '11', '2018-07-19 15:42:51', '解决方案', '00000000001');
-INSERT INTO `sale_opportunity` VALUES ('11', '31', '拓展市场业务', '50', '这是销售机会概要', '12', '13414852973', '这是销售机会描述', '11', '2018-07-19 15:42:55', '11', '2018-07-19 15:42:55', '解决方案', '00000000000');
+INSERT INTO `sale_opportunity` VALUES ('11', '31', '拓展市场业务', '50', '这是销售机会概要', '12', '13414852973', '这是销售机会描述<p><br></p>', '11', '2018-07-19 15:42:55', '11', '2018-07-19 15:42:55', '合同/订单签订', '00000000000');
 INSERT INTO `sale_opportunity` VALUES ('12', '54', '拓展市场业务', '40', 'as', '37', '', 'asd', '29', '2018-08-03 16:28:58', '29', '2018-08-03 16:28:58', '初期沟通\r\n', '00000000001');
 INSERT INTO `sale_opportunity` VALUES ('13', '54', '网上搜索结果', '80', 'aa', '37', '', 'aa', '29', '2018-08-03 16:28:58', '29', '2018-08-03 16:28:58', '初期沟通\r\n', '00000000001');
 INSERT INTO `sale_opportunity` VALUES ('14', '46', '客户主动询价', '30', 'test', '27', '', 'setst', '11', '2018-07-31 11:11:38', '11', '2018-07-31 11:11:38', '立项评估', '00000000001');
 INSERT INTO `sale_opportunity` VALUES ('15', '47', '客户主动询价', '50', 'tset', '28', '', 'tessts', '11', '2018-07-30 09:48:32', '11', '2018-07-30 09:48:32', '立项评估', '00000000001');
 INSERT INTO `sale_opportunity` VALUES ('16', '46', '客户主动询价', '50', 'test', '27', '', 'stest', '11', '2018-07-29 23:59:01', '11', '2018-07-29 23:59:01', '已报价', '00000000001');
 INSERT INTO `sale_opportunity` VALUES ('17', '47', '展会', '70', '发富华大厦垃圾分类圣诞节阿里', '28', '', '<p>dafdafasdf&nbsp;sdf asd&nbsp;<img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/50/pcmoren_huaixiao_org.png\" alt=\"[坏笑]\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/40/pcmoren_tian_org.png\" alt=\"[舔屏]\"><img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/3c/pcmoren_wu_org.png\" alt=\"[污]\"><img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/3c/pcmoren_wu_org.png\" alt=\"[污]\"></p><table border=\"0\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><th>&nbsp;进度</th><th>&nbsp;结果</th></tr><tr><td>&nbsp;50%</td><td>&nbsp;垃圾</td></tr></tbody></table><p><img src=\"http://localhost:8080/crm2/upload/8a24516d-9f94-4457-9566-60d15c74d2a3.jpg\"></p>', '11', '2018-07-29 23:58:27', '11', '2018-07-29 23:58:27', '解决方案', '00000000001');
-INSERT INTO `sale_opportunity` VALUES ('18', '81', '客户主动询价', '50', '23423423423', '45', '23123123213', '<p>23432423424324324322343243</p>', '19', '2018-08-15 20:00:37', '14', '2018-08-15 20:00:37', '解决方案', '00000000001');
+INSERT INTO `sale_opportunity` VALUES ('18', '81', '客户主动询价', '50', '23423423423', '45', '23123123213', '<p>23432423424324324322343243</p>', null, '2018-08-15 20:00:37', null, '2018-08-15 20:00:37', '解决方案', '00000000001');
 INSERT INTO `sale_opportunity` VALUES ('19', '46', '客户主动询价', '70', '答辩测试update', '27', '', '<p>答辩测试<img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/3c/pcmoren_wu_org.png\" alt=\"[污]\" data-w-e=\"1\">update</p>', '11', '2018-07-31 11:11:38', '11', '2018-07-31 11:11:38', '解决方案', '00000000001');
 INSERT INTO `sale_opportunity` VALUES ('20', '31', '网上搜索结果', '40', 'teset', '12', '13414852973', '<p>test<img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/40/pcmoren_tian_org.png\" alt=\"[舔屏]\" data-w-e=\"1\"></p>', '11', '2018-07-31 23:47:13', '11', '2018-07-31 23:47:13', '立项评估', '00000000001');
 
@@ -5931,28 +5665,28 @@ CREATE TABLE `service` (
 -- ----------------------------
 -- Records of service
 -- ----------------------------
-INSERT INTO `service` VALUES ('2', '投诉', '测试44344123', '28', '非常紧急', '2132132123', '未处理', '旺家园是的阿伟大的<p><img src=\"/crm2/upload/bd18066d-e336-4474-93d5-cee876d3d90c.jpg\" style=\"max-width:100%;\"><br></p>', '19', '2018-07-31 13:30:28', '21awsdasdas', '14', '2018-07-12 00:08:18', 'wqsadsadsad', '☆☆☆☆☆', '0');
-INSERT INTO `service` VALUES ('3', '投诉', '测试31243', '28', '非常紧急', '213123', '已归档', '阿萨达撒打算打算大所多啊实打实大神', '19', '2018-07-20 14:32:27', '当场打死了该名客户', '14', '2018-07-11 14:36:38', '赔偿了5块钱', '☆', '0');
-INSERT INTO `service` VALUES ('4', '咨询', '测试我', '3', '非常紧急', '12312321', '已归档', '萨达是被打死的巴萨卡的萨达你忙吧是那么的把什么难度', '19', '2018-07-20 14:36:46', '首先实打实大家来看·1未来靠大家撒\n其次\n撒大家快点结束2崭新的自己\n  戊二醛', '19', '2018-07-11 15:14:54', '非常好', '☆☆', '1');
-INSERT INTO `service` VALUES ('5', '售后', '好无语啊', '3', '非常紧急', '123123891', '未处理', '水电费第三方斯蒂芬斯蒂芬斯蒂芬是否所发生的23安达市大所大大所多2阿达萨达十大艾斯德斯大', '19', '2018-07-20 14:40:02', '123123', '19', '2018-07-12 00:08:18', '123213', '', '1');
-INSERT INTO `service` VALUES ('6', '售前', '价钱问题', '3', '一般', '123213123123', '处理中', '客户对于价钱有异议', '19', '2018-07-20 14:40:02', '我好无语', '19', '2018-07-11 15:17:39', '客户满意', '', '1');
-INSERT INTO `service` VALUES ('7', '投诉', '测试服务', '3', '非常紧急', '13414852973', '未处理', 'test', '11', '2018-07-20 14:40:02', null, '19', null, null, null, '1');
-INSERT INTO `service` VALUES ('8', '咨询', 'ewrwr', '31', '一般', '1232131231', '未处理', '1asdasddasd', '19', '2018-07-20 14:33:50', null, '14', null, null, null, '0');
-INSERT INTO `service` VALUES ('9', '咨询', 'wadawd', '31', '非常紧急', '123213123213', '未处理', 'awasdasdsadasd', '19', '2018-07-20 14:40:02', null, '19', null, null, null, '1');
-INSERT INTO `service` VALUES ('10', '投诉', '好无语', '28', '紧急', '1231232123', '处理中', '撒娇达斯柯达闪电借款奥斯卡几哈设计客户大伤口就会大伤口就会', '19', '2018-07-20 14:32:35', '爱仕达大所大2奥术大师大', '14', '2018-07-12 00:00:00', '啥进度款洒落的骄傲了空间家里肯定加拉斯柯达', '', '0');
-INSERT INTO `service` VALUES ('11', '售前', '123', '3', '非常紧急', '12123132132', '已归档', '阿斯蒂芬规划局快乐', '14', '2018-07-20 14:40:02', '拒绝该客户', '19', '2018-07-13 11:14:54', '12456464', '☆☆☆☆', '1');
+INSERT INTO `service` VALUES ('2', '投诉', '测试44344123', '28', '非常紧急', '2132132123', '未处理', '旺家园是的阿伟大的<p><img src=\"/crm2/upload/bd18066d-e336-4474-93d5-cee876d3d90c.jpg\" style=\"max-width:100%;\"><br></p>', null, '2018-07-31 13:30:28', '21awsdasdas', null, '2018-07-12 00:08:18', 'wqsadsadsad', '☆☆☆☆☆', '0');
+INSERT INTO `service` VALUES ('3', '投诉', '测试31243', '28', '非常紧急', '213123', '已归档', '阿萨达撒打算打算大所多啊实打实大神', null, '2018-07-20 14:32:27', '当场打死了该名客户', null, '2018-07-11 14:36:38', '赔偿了5块钱', '☆', '0');
+INSERT INTO `service` VALUES ('4', '咨询', '测试我', '3', '非常紧急', '12312321', '已归档', '萨达是被打死的巴萨卡的萨达你忙吧是那么的把什么难度', null, '2018-07-20 14:36:46', '首先实打实大家来看·1未来靠大家撒\n其次\n撒大家快点结束2崭新的自己\n  戊二醛', null, '2018-07-11 15:14:54', '非常好', '☆☆', '1');
+INSERT INTO `service` VALUES ('5', '售后', '好无语啊', '3', '非常紧急', '123123891', '未处理', '水电费第三方斯蒂芬斯蒂芬斯蒂芬是否所发生的23安达市大所大大所多2阿达萨达十大艾斯德斯大', null, '2018-07-20 14:40:02', '123123', null, '2018-07-12 00:08:18', '123213', '', '1');
+INSERT INTO `service` VALUES ('6', '售前', '价钱问题', '3', '一般', '123213123123', '处理中', '客户对于价钱有异议', null, '2018-07-20 14:40:02', '我好无语', null, '2018-07-11 15:17:39', '客户满意', '', '1');
+INSERT INTO `service` VALUES ('7', '投诉', '测试服务', '3', '非常紧急', '13414852973', '未处理', 'test', '11', '2018-07-20 14:40:02', null, null, null, null, null, '1');
+INSERT INTO `service` VALUES ('8', '咨询', 'ewrwr', '31', '一般', '1232131231', '未处理', '1asdasddasd', null, '2018-07-20 14:33:50', null, null, null, null, null, '0');
+INSERT INTO `service` VALUES ('9', '咨询', 'wadawd', '31', '非常紧急', '123213123213', '未处理', 'awasdasdsadasd', null, '2018-07-20 14:40:02', null, null, null, null, null, '1');
+INSERT INTO `service` VALUES ('10', '投诉', '好无语', '28', '紧急', '1231232123', '处理中', '撒娇达斯柯达闪电借款奥斯卡几哈设计客户大伤口就会大伤口就会', null, '2018-07-20 14:32:35', '爱仕达大所大2奥术大师大', null, '2018-07-12 00:00:00', '啥进度款洒落的骄傲了空间家里肯定加拉斯柯达', '', '0');
+INSERT INTO `service` VALUES ('11', '售前', '123', '3', '非常紧急', '12123132132', '已归档', '阿斯蒂芬规划局快乐', null, '2018-07-20 14:40:02', '拒绝该客户', null, '2018-07-13 11:14:54', '12456464', '☆☆☆☆', '1');
 INSERT INTO `service` VALUES ('12', '咨询', '手环价格', '31', '一般', '13414852973', '未处理', '咨询小米手环3价格<p><img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/50/pcmoren_huaixiao_org.png\" alt=\"[坏笑]\" data-w-e=\"1\"><img src=\"/crm2/upload/e1e8e93f-0c54-4988-807c-d169121eca70.png\" style=\"max-width: 100%;\"><br></p>', '11', '2018-07-14 10:57:00', null, '11', null, null, null, '0');
-INSERT INTO `service` VALUES ('13', '投诉', '213424234', '30', '非常紧急', '234324324', '未处理', '234324324324324', '19', '2018-07-20 14:40:02', null, '19', null, null, null, '1');
-INSERT INTO `service` VALUES ('14', '投诉', '好好好好', '48', '一般', '12312312312', '未处理', '萨达萨达速度哪受得了啊可接受的哈萨克的好的', '19', '2018-07-19 14:13:49', null, '11', null, null, null, '0');
-INSERT INTO `service` VALUES ('15', '投诉', '123213', '48', '紧急', '123213', '未处理', '1231232132', '19', '2018-07-20 14:40:02', null, '19', null, null, null, '1');
-INSERT INTO `service` VALUES ('16', '投诉', '123213213', '49', '非常紧急', '123213123', '处理中', '123123213123', '19', '2018-07-25 09:59:13', '<p><img src=\"/crm2/upload/4a5fb80d-8a1b-4a3f-81b9-de925b72ca79.jpg\" style=\"max-width:100%;\"><br></p><p>文件啊大家都来卡的进口量爱死了肯德基埃里克大家来看啥借口了大家速度来看奥斯卡来得及阿斯利康大健康阿斯利康多久爱死了肯德基阿斯利康多久爱死了肯德基爱丽丝肯德基爱丽丝肯德基</p>', '19', '2018-07-12 00:00:00', '', '', '0');
-INSERT INTO `service` VALUES ('17', '售后', 'aaa', '54', '非常紧急', '12', '未处理', '', '29', '2018-07-22 22:28:43', null, '30', null, null, null, '0');
+INSERT INTO `service` VALUES ('13', '投诉', '213424234', '30', '非常紧急', '234324324', '未处理', '234324324324324', null, '2018-07-20 14:40:02', null, null, null, null, null, '1');
+INSERT INTO `service` VALUES ('14', '投诉', '好好好好', '48', '一般', '12312312312', '未处理', '萨达萨达速度哪受得了啊可接受的哈萨克的好的', null, '2018-07-19 14:13:49', null, '11', null, null, null, '0');
+INSERT INTO `service` VALUES ('15', '投诉', '123213', '48', '紧急', '123213', '未处理', '1231232132', null, '2018-07-20 14:40:02', null, null, null, null, null, '1');
+INSERT INTO `service` VALUES ('16', '投诉', '123213213', '49', '非常紧急', '123213123', '处理中', '123123213123', null, '2018-07-25 09:59:13', '<p><img src=\"/crm2/upload/4a5fb80d-8a1b-4a3f-81b9-de925b72ca79.jpg\" style=\"max-width:100%;\"><br></p><p>文件啊大家都来卡的进口量爱死了肯德基埃里克大家来看啥借口了大家速度来看奥斯卡来得及阿斯利康大健康阿斯利康多久爱死了肯德基阿斯利康多久爱死了肯德基爱丽丝肯德基爱丽丝肯德基</p>', null, '2018-07-12 00:00:00', '', '', '0');
+INSERT INTO `service` VALUES ('17', '售后', 'aaa', '54', '非常紧急', '12', '未处理', '', '29', '2018-07-22 22:28:43', null, null, null, null, null, '0');
 INSERT INTO `service` VALUES ('18', '咨询', 'sad', '54', '紧急', 'sad', '未处理', '', '29', '2018-07-23 09:38:33', '', '29', null, '', '', '0');
 INSERT INTO `service` VALUES ('19', '投诉', 'asd', '59', '一般', 'asd', '未处理', '', '29', '2018-07-23 20:35:07', null, '29', null, null, null, '0');
 INSERT INTO `service` VALUES ('20', '投诉', '123123', '28', '非常紧急', '13414852736', '处理中', 'iudoausdouasoudoisaudoasdsa', '9', '2018-07-24 13:53:29', '<p>123213123213<img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/50/pcmoren_huaixiao_org.png\" alt=\"[坏笑]\" data-w-e=\"1\"></p>', '9', '2018-07-24 13:53:17', '213123213', '☆☆☆', '0');
-INSERT INTO `service` VALUES ('21', '咨询', '123123213', '49', '非常紧急', '23432423432', '未处理', '<p>234234234</p><p><br></p><p><img src=\"/crm2/upload/c4137820-9164-44d3-be4c-01fcb86a9a6a.jpg\" style=\"max-width:100%;\"><br></p>', '19', '2018-07-24 00:00:00', null, '19', null, null, null, '0');
-INSERT INTO `service` VALUES ('22', '投诉', '24234324', '50', '非常紧急', '24324324234', '未处理', '<p>234234234</p>', '19', '2018-07-24 15:39:10', null, '19', null, null, null, '0');
-INSERT INTO `service` VALUES ('23', '投诉', '好无语啊', '50', '非常紧急', '123123123123', '已处理', '<p><span style=\"text-decoration-line: line-through;\">311247645645645645666656456</span><img src=\"/crm2/upload/96d10875-85db-45be-8bc6-063b1ef98846.jpg\" style=\"max-width: 100%;\"><br></p>', '19', '2018-07-25 10:54:20', '<p><img src=\"/crm2/upload/6102a479-77bb-40ef-9726-44180b77f45c.jpg\" style=\"max-width:100%;\"><br></p>', '19', '2018-07-25 10:25:07', '12312312312', '☆☆☆☆', '1');
+INSERT INTO `service` VALUES ('21', '咨询', '123123213', '49', '非常紧急', '23432423432', '未处理', '<p>234234234</p><p><br></p><p><img src=\"/crm2/upload/c4137820-9164-44d3-be4c-01fcb86a9a6a.jpg\" style=\"max-width:100%;\"><br></p>', null, '2018-07-24 00:00:00', null, null, null, null, null, '0');
+INSERT INTO `service` VALUES ('22', '投诉', '24234324', '50', '非常紧急', '24324324234', '未处理', '<p>234234234</p>', null, '2018-07-24 15:39:10', null, null, null, null, null, '0');
+INSERT INTO `service` VALUES ('23', '投诉', '好无语啊', '50', '非常紧急', '123123123123', '已处理', '<p><span style=\"text-decoration-line: line-through;\">311247645645645645666656456</span><img src=\"/crm2/upload/96d10875-85db-45be-8bc6-063b1ef98846.jpg\" style=\"max-width: 100%;\"><br></p>', null, '2018-07-25 10:54:20', '<p><img src=\"/crm2/upload/6102a479-77bb-40ef-9726-44180b77f45c.jpg\" style=\"max-width:100%;\"><br></p>', null, '2018-07-25 10:25:07', '12312312312', '☆☆☆☆', '1');
 
 -- ----------------------------
 -- Table structure for service_transfer
@@ -6005,8 +5739,11 @@ CREATE TABLE `user` (
   UNIQUE KEY `email` (`email`) USING BTREE,
   KEY `user_role_fk` (`role_id`),
   CONSTRAINT `user_role_fk` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
+INSERT INTO `user` VALUES ('9', 'huangqingwen', 'e9e4503aa4a36ad20cc91a07ad7d1b85', '黄sir', '660316ef7384fd9d9ed565ddee945967', '17952213111@qq.com', '13414811112', '2018-07-06 11:20:30', '2018-07-31 14:36:15', '2', '0');
+INSERT INTO `user` VALUES ('11', 'malizhi', '297fe90eca7db93e614bc83bdea9722b', '马sir', 'df4eda1dbd9eabede8804b26e48ec489', '1111111@foxmail.com', '13414811113', '2018-07-10 11:20:36', '2019-11-26 09:23:08', '4', '0');
+INSERT INTO `user` VALUES ('29', 'wujunyou', '86bfbe882778a71d1746661462a8a8c8', '吴sir', '935d85f90011c8736db7367b85dd7b32', '1795211111@qq.com', '13414811111', '2018-07-10 09:27:31', '2018-07-31 15:02:30', '1', '0');

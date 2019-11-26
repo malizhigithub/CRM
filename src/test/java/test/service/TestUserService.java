@@ -1,4 +1,7 @@
-package service;
+/**
+ * 
+ */
+package test.service;
 
 import java.util.List;
 
@@ -9,12 +12,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.neuedu.crm.mapper.UserMapper;
 import com.neuedu.crm.pojo.User;
 import com.neuedu.crm.pojo.UserExample;
 import com.neuedu.crm.service.IUserService;
 
-
+/**
+ * @author wanghaoyu
+ *
+ */
 public class TestUserService {
     protected ApplicationContext context;
     protected IUserService userService;
@@ -26,7 +31,9 @@ public class TestUserService {
         try {
             String configLocation = "spring/applicationContext.xml";
             context = new ClassPathXmlApplicationContext(configLocation);
+            logger.error("0000000000000000"+context);
             userService = context.getBean(IUserService.class);
+            logger.error("+++++++11111111111111"+userService);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -48,9 +55,10 @@ public class TestUserService {
     @Test
     public void testAddUser(){
         User user = new User();
-        user.setAccount("username");
+        user.setAccount("testtest");
         user.setPassword("123456");
-        user.setRealName("username");
+        user.setRealName("wagg");
+        logger.error("-----------------222222222222"+userService);
         if( userService.save(user) == true) {
             logger.info("添加成功");
         }
@@ -63,7 +71,7 @@ public class TestUserService {
     public void testeditUser(){
         User user = new User();
         user.setId(19);
-        user.setAccount("ma");
+        user.setAccount("wang");
         if( userService.edit(user) == true) {
             logger.info("添加成功");
         }
