@@ -35,7 +35,7 @@
   - 项目数据库在一级目录中，命名为CRM.sql，其中‘user’表为账户表
   - 部署项目前，需要配置好MqSQL数据库，Redis数据库、mail邮箱，这三个配置文件都在crm/src/main/resources/properties
   - 项目登录帐号：malizhi(管理员级别)，密码123456，部署项目后，可以到测试类中（test包下的TestUserService）进行添加账户，密码经过md5加密加盐
-  - 登录页：如果是本地部署http://localhost:8080/crm2/pages/login.jsp，端口号以及项目名要与你部署的环境一致
+  - 登录页：如果是本地部署 http://localhost:8080/crm2/pages/login.jsp ,端口号以及项目名要与部署的环境一致
   
 - 部署过程异常错误解决方法
   - 权限，菜单都会缓存到redis中，如果redis无法连接，将会报空指针错误或登陆后首页会显示404，请确保能连接上redis数据库
