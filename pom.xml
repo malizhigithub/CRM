@@ -302,7 +302,7 @@
 	<dependency>
 	    <groupId>org.apache.shiro</groupId>
 	    <artifactId>shiro-spring</artifactId>
-	    <version>1.4.0</version>
+	    <version>1.7.1</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-ehcache -->
 	<dependency>
