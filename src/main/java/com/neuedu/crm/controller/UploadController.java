@@ -30,6 +30,10 @@ import com.neuedu.crm.utils.Operation;
 public class UploadController {
     
     private Logger logger = LoggerFactory.getLogger(UploadController.class);
+
+    //允许上传的图片后缀名白名单，防止上传可执行脚本（如 jsp）导致远程代码执行
+    private static final java.util.Set<String> ALLOWED_IMAGE_EXTENSIONS = new java.util.HashSet<String>(java.util.Arrays.asList(
+            ".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp"));
     
     @Operation(name="上传图片")
     @RequiresAuthentication
@@ -90,8 +94,16 @@ public class UploadController {
                 }
                 //获取原始的图片名
                 String filename = file.getOriginalFilename();
+                //校验文件名及后缀，拒绝无后缀文件
+                if(filename == null || filename.lastIndexOf(".") < 0) {
+                    return null;
+                }
                 //获取文件后缀
                 String extension = filename.substring(filename.lastIndexOf("."));
+                //仅允许白名单内的图片类型，防止上传可执行脚本造成远程代码执行
+                if(!ALLOWED_IMAGE_EXTENSIONS.contains(extension.toLowerCase())) {
+                    return null;
+                }
                 //重新为图片命名
                 String rename = UUID.randomUUID().toString() + extension;
                 
